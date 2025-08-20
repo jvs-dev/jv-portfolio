@@ -1,21 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Projects.css";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
   const texts = [
     "Responsive landing page for cat food",
-    "barber shop app with online scheduling and information",
+    "barber shop app with online scheduling",
   ];
   const [projectViwed, setProjectViwed] = React.useState(1);
   const [animation, setAnimation] = useState(false);
 
-  useEffect(() => {
+  function handleClick(calcIndex) {
     setAnimation(true);
+    setProjectViwed((last) => last + calcIndex);
     setTimeout(() => {
       setAnimation(false);
-    }, 600);
-  }, [projectViwed]);
+    }, 1000);
+  }
 
   return (
     <section className="projectsSection">
@@ -64,14 +65,14 @@ const Projects = () => {
           <button
             className="projectWindow__slideButton"
             type="button"
-            onClick={() => setProjectViwed((last) => last - 1)}
+            onClick={() => handleClick(-1)}
           >
             <ion-icon name="chevron-back-outline"></ion-icon>
           </button>
           <button
             className="projectWindow__slideButton"
             type="button"
-            onClick={() => setProjectViwed((last) => last + 1)}
+            onClick={() => handleClick(1)}
           >
             <ion-icon name="chevron-forward-outline"></ion-icon>
           </button>
