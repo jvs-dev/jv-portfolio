@@ -1,0 +1,57 @@
+.musicButton {
+  position: relative;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  padding: 4px;
+  background-color: var(--background);
+  border: none;
+  border-radius: 1000px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  z-index: 3;
+}
+
+.musicButton.active ion-icon {
+  transform: translateX(-40px);
+  background: var(--primary-red);
+  color: var(--background);
+}
+
+.musicButton ion-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  padding: 10px;
+  border-radius: 100%;
+  color: var(--primary-red);
+  background: var(--background);
+  transition: 0.5s ease;
+}
+
+.musicButton ion-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: var(--primary-red);
+  rotate: 45deg;
+  transition: 0.5s ease;
+}
+
+.musicButton.active ion-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: var(--primary-red);
+  rotate: 45deg;
+  opacity: 0;
+}

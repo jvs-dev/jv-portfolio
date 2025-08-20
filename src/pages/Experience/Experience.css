@@ -1,0 +1,122 @@
+.experienceSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding: 40px 20px;
+  gap: 30px;
+}
+
+.experienceSection__logosDiv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr auto;
+  gap: 8px;
+}
+
+.experienceSection__logoCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: var(--card-background-2);
+  border-radius: 12px;
+}
+
+.experienceSection__logoCard img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.experienceSection__logoCard.logoCard--column {
+  flex-direction: column;
+  gap: 5px;
+}
+
+.experienceSection__logoCard.logoCard--column img {
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.large-item {
+  grid-column: span 2;
+  height: auto;
+}
+
+.large-item img {
+  width: 100%;
+  height: 70%;
+}
+
+.experienceSection__textDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: fit-content;
+  max-width: 560px;
+}
+
+.experienceSection__title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 2.7em;
+  line-height: 110%;
+  letter-spacing: 3px;
+  font-weight: lighter;
+  color: var(--title-white);
+  font-family: var(--title-font);
+  margin: 0;
+  text-align: left;
+  gap: 12px;
+}
+.experienceSection__title ion-icon {
+  background: var(--gradient);
+  padding: 12px;
+  height: 26px;
+  width: 26px;
+  border-radius: 10px;
+}
+
+.experienceSection__title i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient);
+  padding: 12px;
+  height: 50px;
+  width: 50px;
+  font-size: 32px;
+  border-radius: 10px;
+}
+
+.experienceSection__text {
+  font-family: var(--text-font);
+  color: var(--white);
+  font-size: 24px;
+  padding: 0px 40px 0px 0px;
+}
+
+.experienceSection__button {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--background);
+  background: var(--title-white);
+  padding: 16px 50px;
+  border-radius: 1000px;
+  cursor: pointer;
+  border: solid 2px transparent;
+  outline-width: 0px;
+  width: fit-content;
+  transition: 0.3s;
+}
+
+.experienceSection__button:hover {
+  color: var(--title-white);
+  background: transparent;
+  border: solid 2px var(--title-white);
+}

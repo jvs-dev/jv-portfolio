@@ -1,0 +1,22 @@
+:root {
+  --primary-red: #e51717;
+  --primary-pink: #e61550;
+  --gradient: linear-gradient(90deg, #e51717 0%, #e61550 100%);
+  --background: #141414;
+  --card-background: #232323;
+  --card-background-2: #1a1a1a;
+  --white: #ffffff;
+  --title-white: #FDF0F0;
+  --black: #000000;
+  --gray: #444342;
+  --title-font: "Alfa Slab One", serif;
+  --text-font: "Itim", cursive;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--text-font);
+  background-color: var(--background);
+  color: #ffffff;
+}

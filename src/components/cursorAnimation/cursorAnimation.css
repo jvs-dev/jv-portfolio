@@ -1,0 +1,40 @@
+#cursorCircle {
+  position: absolute;
+  height: 38px;
+  width: 38px;
+  border-radius: 100%;
+  border: solid 2px #444342;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.trianglePattern {
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  left: 0;
+  top: 0;
+  border-right: 14px solid #444342;
+  border-top: 14px solid transparent;
+  opacity: 0;
+  animation: triangleAnimation 2s ease;
+  transition: 2s;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes triangleAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
