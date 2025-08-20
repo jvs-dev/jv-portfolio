@@ -1,6 +1,6 @@
 <svg width="623" height="485" viewBox="0 0 623 485" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect x="8" y="34" width="607" height="344.335" rx="39" fill="url(#pattern0_3538_381)" stroke="black" stroke-width="8"/>
-<rect x="262" y="374.334" width="100" height="25" fill="black"/>
+<rect x="9" y="35" width="605" height="342.335" rx="25" fill="url(#pattern0_3538_381)" stroke="black" stroke-width="6"/>
+<rect x="278" y="374" width="68" height="25" fill="black"/>
 <path d="M198 410.334C198 404.259 202.925 399.334 209 399.334H425C431.075 399.334 436 404.259 436 410.334V410.334H198V410.334Z" fill="black"/>
 <rect x="419.5" y="166.835" width="151" height="284" rx="20.5" fill="url(#pattern1_3538_381)" stroke="black" stroke-width="5"/>
 <circle cx="495" cy="179.335" r="4" fill="black"/>

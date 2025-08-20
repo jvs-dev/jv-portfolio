@@ -6,6 +6,7 @@ import CubesAnimated from "../../components/CubesAnimated/CubesAnimated";
 import MusicButton from "../../components/MusicButton/MusicButton";
 import Experience from "../Experience/Experience";
 import Projects from "../Projects/Projects";
+import Skills from "../Skills/Skills";
 
 const Home = () => {
   return (
@@ -29,6 +30,7 @@ const Home = () => {
       <MusicButton />
       <Experience />
       <Projects />
+      <Skills />
     </main>
   );
 };

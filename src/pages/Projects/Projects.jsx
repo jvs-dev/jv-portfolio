@@ -5,14 +5,23 @@ import { Link } from "react-router-dom";
 const Projects = () => {
   const texts = [
     "Responsive landing page for cat food",
-    "barber shop app with online scheduling",
+    "Barber shop app with online scheduling",
+    "Complete system for robotics classes",
   ];
   const [projectViwed, setProjectViwed] = React.useState(1);
   const [animation, setAnimation] = useState(false);
 
-  function handleClick(calcIndex) {
+  function handleClick(goTo) {
     setAnimation(true);
-    setProjectViwed((last) => last + calcIndex);
+    if (projectViwed == 1 && goTo == "back") {
+      setProjectViwed(texts.length);
+    } else if (projectViwed == texts.length && goTo == "forward") {
+      setProjectViwed(1);
+    } else {
+      setProjectViwed((lastValue) =>
+        goTo == "back" ? lastValue - 1 : lastValue + 1
+      );
+    }
     setTimeout(() => {
       setAnimation(false);
     }, 1000);
@@ -24,7 +33,7 @@ const Projects = () => {
         My Projects<ion-icon name="cafe"></ion-icon>
       </h2>
 
-      <div className="projectWindowDiv">
+      <div className="projectWindowDiv">        
         <img
           className={`projectWindow__banner ${animation && "sideAnime"}`}
           src={`./projects/project-${projectViwed}-banner.svg`}
@@ -65,14 +74,14 @@ const Projects = () => {
           <button
             className="projectWindow__slideButton"
             type="button"
-            onClick={() => handleClick(-1)}
+            onClick={() => handleClick("back")}
           >
             <ion-icon name="chevron-back-outline"></ion-icon>
           </button>
           <button
             className="projectWindow__slideButton"
             type="button"
-            onClick={() => handleClick(1)}
+            onClick={() => handleClick("forward")}
           >
             <ion-icon name="chevron-forward-outline"></ion-icon>
           </button>

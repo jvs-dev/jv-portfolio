@@ -42,17 +42,6 @@
   animation: textAnimation 2s ease forwards;
 }
 
-@keyframes textAnimation {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
 .home__title span {
   font-size: 4.3rem;
   line-height: 105%;
@@ -68,15 +57,6 @@
   font-family: var(--title-font);
   animation: gradiendAnimation 3s linear infinite;
   background-size: 300% 300%;
-}
-
-@keyframes gradiendAnimation {
-  0% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 .home__subTitle {
@@ -109,4 +89,24 @@
 
 .home__button:hover {
   color: var(--white);
+}
+
+@keyframes gradiendAnimation {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
