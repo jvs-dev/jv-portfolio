@@ -1,6 +1,6 @@
 import React from "react";
 import "./Skills.css";
-import { faJava } from "@fortawesome/free-brands-svg-icons";
+import { faJava, faNpm, faYarn } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Skills = () => {
@@ -38,19 +38,21 @@ const Skills = () => {
       name: "JAVA",
     },
     {
+      icon: <FontAwesomeIcon icon={faNpm} />,
+      name: "NPM",
+    },
+    {
+      icon: <FontAwesomeIcon icon={faYarn} />,
+      name: "YARN",
+    },
+    {
+      icon: <i className="bi bi-git"></i>,
+      name: "GIT",
+    },
+    {
       icon: <ion-icon className="techCard__icon" name="logo-github"></ion-icon>,
       name: "GITHUB",
-    },
-    {
-      icon: (
-        <ion-icon className="techCard__icon" name="logo-firebase"></ion-icon>
-      ),
-      name: "FIREBASE",
-    },
-    {
-      icon: <ion-icon className="techCard__icon" name="logo-figma"></ion-icon>,
-      name: "FIGMA",
-    },
+    },    
   ];
 
   const techsInPairs = [
