@@ -18,15 +18,11 @@ const Skills = () => {
       name: "JAVASCRIPT",
     },
     {
-      icon: (
-        <ion-icon className="techCard__icon" name="logo-nodejs"></ion-icon>
-      ),
+      icon: <ion-icon className="techCard__icon" name="logo-nodejs"></ion-icon>,
       name: "NODE.JS",
     },
     {
-      icon: (
-        <ion-icon className="techCard__icon" name="logo-react"></ion-icon>
-      ),
+      icon: <ion-icon className="techCard__icon" name="logo-react"></ion-icon>,
       name: "REACT.JS",
     },
     {
@@ -36,9 +32,7 @@ const Skills = () => {
       name: "ANGULAR",
     },
     {
-      icon: (
-        <ion-icon className="techCard__icon" name="logo-github"></ion-icon>
-      ),
+      icon: <ion-icon className="techCard__icon" name="logo-github"></ion-icon>,
       name: "GITHUB",
     },
     {
@@ -48,18 +42,53 @@ const Skills = () => {
       name: "FIREBASE",
     },
     {
-      icon: (
-        <ion-icon className="techCard__icon" name="logo-figma"></ion-icon>
-      ),
+      icon: <ion-icon className="techCard__icon" name="logo-figma"></ion-icon>,
       name: "FIGMA",
     },
   ];
+
+  const techsInPairs = [
+    ["Figma", "UI & UX Design"],
+    ["Rest APIs", "Jest para testes"],
+    ["Tensorflow", "Gemini AI - APIs"],
+    ["Git", "Github"],
+    ["Scrum", "Kabam"],
+    ["Firebase", "Appwrite"],
+  ];
+
+  const techLists = [];
+  let techIndex = 0;
+
+  for (let i = 0; i < techsInPairs.length / 2; i++) {
+    techLists.push(
+      <div className="skillsSection__div--4" key={i}>
+        <ul className="skillsSection__techsList">
+          <li className="skillsSection__techsList__li">
+            {techsInPairs[techIndex][0]}
+          </li>
+          <li className="skillsSection__techsList__li">
+            {techsInPairs[techIndex++][1]}
+          </li>
+        </ul>
+        <div className="skillsSection__techsList__line"></div>
+        <ul className="skillsSection__techsList">
+          <li className="skillsSection__techsList__li">
+            {techsInPairs[techIndex][0]}
+          </li>
+          <li className="skillsSection__techsList__li">
+            {techsInPairs[techIndex++][1]}
+          </li>
+        </ul>
+      </div>
+    );
+  }
 
   return (
     <section className="skillsSection">
       <h2 className="experienceSection__title">
         My Skills <ion-icon name="flame"></ion-icon>
       </h2>
+
       <div className="skillsSection__div--1">
         <h3 className="skillsSection__h3">
           Languages <ion-icon name="hardware-chip"></ion-icon>
@@ -71,6 +100,24 @@ const Skills = () => {
               <p className="techCard__p">{el.name}</p>
             </article>
           ))}
+        </div>
+      </div>
+
+      <div className="skillsSection__div--1">
+        <h3 className="skillsSection__h3">
+          Techs And More <ion-icon name="rocket"></ion-icon>
+        </h3>
+        <div className="skillsSection__div--3">
+          {/* <div className="skillsSection__div--4">
+            <ul className="skillsSection__techsList">
+              <li className="skillsSection__techsList__li">Teste1</li>
+            </ul>
+            <div className="skillsSection__techsList__line"></div>
+            <ul className="skillsSection__techsList">
+              <li className="skillsSection__techsList__li">Teste</li>
+            </ul>
+          </div> */}
+          {techLists}
         </div>
       </div>
     </section>

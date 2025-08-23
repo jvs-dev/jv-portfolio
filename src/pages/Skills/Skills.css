@@ -35,7 +35,7 @@
   height: 20px;
   width: 20px;
   border-radius: 10px;
-  margin: 0px 0px 20px 0px;
+  margin: 0px;
 }
 
 .skillsSection__div--2 {
@@ -46,6 +46,7 @@
   justify-content: center;
   gap: 15px 12px;
   width: 100%;
+  margin: 0px 0px 40px 0px;
 }
 
 .skillsSection__techCard {
@@ -80,4 +81,43 @@
   font-weight: 800;
   font-size: 20px;
   margin: 0px;
+}
+
+.skillsSection__div--3 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 20px 20px 20px;
+}
+
+.skillsSection__div--4 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.skillsSection__techsList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  list-style: disc;
+  gap: 6px;
+  margin: 0px;
+}
+
+.skillsSection__techsList__li {
+  font-size: 24px;
+  font-family: var(--text-font);
+  color: var(--title-white);
+}
+
+.skillsSection__techsList__line {
+  width: calc(100% - 80px);
+  height: 6px;
+  background: var(--card-background);
+  margin: 14px 40px 14px 40px;
 }
