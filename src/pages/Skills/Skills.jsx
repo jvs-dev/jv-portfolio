@@ -1,5 +1,7 @@
 import React from "react";
 import "./Skills.css";
+import { faJava } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Skills = () => {
   const skillsObj = [
@@ -30,6 +32,10 @@ const Skills = () => {
         <ion-icon className="techCard__icon" name="logo-angular"></ion-icon>
       ),
       name: "ANGULAR",
+    },
+    {
+      icon: <FontAwesomeIcon icon={faJava} />,
+      name: "JAVA",
     },
     {
       icon: <ion-icon className="techCard__icon" name="logo-github"></ion-icon>,

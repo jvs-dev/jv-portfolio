@@ -32,15 +32,6 @@
   z-index: 0;
 }
 
-@keyframes loadingAnimation {
-  0% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 .projectWindow__banner {
   position: absolute;
   left: 0;
@@ -88,25 +79,6 @@
   margin: 0;
   text-align: left;
   text-wrap-style: balance;
-}
-
-.sideAnime {
-  animation: sideIn 1s ease;
-}
-
-@keyframes sideIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-10px);
-  }
-  50% {
-    opacity: 0;
-    transform: translateX(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
 }
 
 .projectWindow__viewButton {
@@ -157,4 +129,32 @@
   padding: 0px;
   margin: 0px;
   cursor: pointer;
+}
+
+.sideAnime {
+  animation: sideIn 1s ease;
+}
+
+@keyframes sideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes loadingAnimation {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

@@ -35,7 +35,7 @@ const Experience = () => {
           quidem rerum rem corporis quibusdam ut similique quia ut rerum
         </p>
         <button className="experienceSection__button" type="button">
-          Meet Me
+          See More
         </button>
       </div>
     </section>
