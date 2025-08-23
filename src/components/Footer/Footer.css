@@ -1,0 +1,119 @@
+.footer {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--black);
+}
+
+.footer__topLine {
+  width: 100%;
+  height: 3px;
+  background: var(--gradient);
+}
+
+.footer__title {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  font-weight: lighter;
+  color: var(--white);
+  font-family: var(--title-font);
+  margin: 0;
+  text-align: left;
+}
+
+.footer__div--1 {
+  height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__copy {
+  font-family: var(--text-font);
+  color: var(--white);
+  font-size: 18px;
+  margin: 20px 0px 0px 0px;
+  text-wrap: balance;
+}
+
+.footer__listTitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0px 0px 14px 0px;
+}
+
+.footer__ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+  gap: 12px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.footer__li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+.footer__li a {
+  text-decoration: none;
+  color: var(--white);
+  font-family: var(--text-font);
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 4px;
+  opacity: 0.6;
+  transition: 0.3s ease;
+}
+
+.footer__li a ion-icon {
+  font-size: 28px;
+}
+
+.footer__nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 30px;
+}
+
+.footer__nav__a {
+  text-decoration: none;
+  color: var(--white);
+  font-family: var(--text-font);
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 8px;
+  opacity: 0.6;
+  transition: 0.3s ease;
+}
+
+.footer__nav__a:hover,
+.footer__li a:hover {
+  opacity: 1;
+  color: var(--primary-red);
+}
+
+.footer__div--3 {
+  height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
