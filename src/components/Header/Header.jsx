@@ -31,6 +31,7 @@ const Header = () => {
       <Link to={"/"} className="header__logoLink">
         <img className="header__logo" src="jvs-logo.svg" alt="JOÃO SILVA" />
       </Link>
+      <button type="button" className="menutoggle-btn"></button>
     </header>
   );
 };

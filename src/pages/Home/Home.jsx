@@ -17,16 +17,24 @@ const Home = () => {
       <Header />
       <section className="homeSection">
         <img className="home__patternSvg" src="/backgrountPaternSvg.svg" />
-        <h1 className="home__title">
-          I am João Vitor
-          <br />
-          <span>Full-stack developer</span>
-        </h1>
-        <p className="home__subTitle">Hire a qualified programmer.</p>
-        <Link className="home__button" to={"#"}>
-          <ion-icon name="logo-linkedin"></ion-icon>
-          See Me On Linkedin
-        </Link>
+        <h1 className="home__title">Hi there, I'm</h1>
+        <h1 className="home__title--2">João Vitor Santana</h1>
+        <h2 className="home__title--3">Full-stack developer</h2>
+        <div className="home__div--1">
+          <Link className="home__button" to={"#"}>
+            <ion-icon name="logo-linkedin"></ion-icon>
+            Linkedin
+          </Link>
+          <Link className="home__button button--2" to={"#"}>
+            Talk Me
+          </Link>
+        </div>
+        {/* <div className="home__div--2">
+            Colocar logos
+        </div> */}
+        <span className="home__downArrow">
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </span>
       </section>
       <CubesAnimated />
       <MusicButton />

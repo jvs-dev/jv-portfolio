@@ -42,6 +42,12 @@
   width: 50px;
   border-radius: 10px;
   font-size: 30px;
+  cursor: pointer;
+  transition: 0.2s cubic-bezier(0.67, 0.52, 1, 2.54);
+}
+
+.header__resumeBtn:hover {
+  transform: scale(1.05);
 }
 
 .header__nav {
@@ -65,9 +71,12 @@
   background: var(--gray);
 }
 
-.header__navLink:hover {  
+.header__navLink:hover {
   color: var(--primary-red);
   transform: scale(1.1);
+}
+.header__navLink.active:hover {
+  color: var(--white);
 }
 
 .header__line {
@@ -77,6 +86,84 @@
   margin: 0px -5px;
 }
 
-.header__logo {  
+.header__logo {
   width: 180px;
+}
+
+.menutoggle-btn {
+  padding: 0px;
+  margin: 0px;
+  height: 25px;
+  width: 35px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  outline: 0px;
+  border: 0px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.menutoggle-btn::after {
+  content: "";
+  background-color: var(--primary-red);
+  width: 100%;
+  height: 3px;
+  box-shadow: 0px 11px 0px var(--primary-red);
+  transition: 0.5s;
+}
+
+.menutoggle-btn::before {
+  content: "";
+  background-color: var(--primary-red);
+  width: 100%;
+  height: 3px;
+  transform: translateY(-8px);
+  transition: 0.5s;
+}
+
+.menutoggle-btn.active {
+  transform: rotate(180deg);
+}
+
+.menutoggle-btn.active::after {
+  box-shadow: 0px 0px 0px var(--primary-red);
+  transform: translate(0px, -2px) rotate(-45deg);
+}
+
+.menutoggle-btn.active::before {
+  transform: translate(0px, 2px) rotate(45deg);
+}
+
+@media screen and (max-width: 925px) {
+  .header {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+    margin: 0px;
+    padding: 20px;
+  }
+  .header__logo {
+    height: 50px;
+    width: auto;
+  }
+  .header__container {
+    display: none;
+  }
+  .header__container::after {
+    display: none;
+  }
+  .header a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .menutoggle-btn {
+    display: flex;
+  }
 }
