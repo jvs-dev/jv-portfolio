@@ -41,7 +41,7 @@ const MusicButton = () => {
       >
         <ion-icon name="musical-note"></ion-icon>
       </button>
-      <audio className="musicAudio" src="/backgroundAudio.mp3" autoPlay loop />
+      <audio className="musicAudio" src="/backgroundAudio.mp3" loop />
     </>
   );
 };

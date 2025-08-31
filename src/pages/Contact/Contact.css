@@ -161,3 +161,25 @@
   font-size: 20px;
   margin: 0px;
 }
+
+@media screen and (max-width: 925px) {
+  .contactSection__form {
+    padding: 40px 0px;
+  }
+  .contactSection__submitBtn {
+    border-radius: 1000px;
+    font-size: 20px;
+  }
+  .contactSection__div--2 {
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+  }
+  .contactSection__linkCard {
+    width: calc(50% - 5px);
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--white);
+    transition: 0.3s ease;
+  }
+}

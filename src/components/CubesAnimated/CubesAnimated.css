@@ -118,3 +118,9 @@
     transform: translateY(0);
   }
 }
+
+@media screen and (max-width: 925px) {
+  .cube {
+    font-size: 8vw;
+  }
+}

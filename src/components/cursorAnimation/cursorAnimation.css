@@ -38,3 +38,12 @@
     opacity: 0;
   }
 }
+
+@media screen and (max-width: 925px) {
+  #cursorCircle {
+    display: none;
+  }
+  .trianglePattern {
+    display: none;
+  }
+}

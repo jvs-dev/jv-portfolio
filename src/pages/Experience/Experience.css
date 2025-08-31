@@ -120,3 +120,26 @@
   background: transparent;
   border: solid 2px var(--title-white);
 }
+
+@media screen and (max-width: 925px) {
+  .experienceSection {
+    flex-direction: column-reverse;
+    height: auto;
+    min-height: 100vh;
+  }
+  .experienceSection__textDiv {
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .experienceSection__title {
+    font-size: 30px;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .experienceSection__button {
+    padding: 14px 29px;
+  }  
+}

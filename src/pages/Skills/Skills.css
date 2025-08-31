@@ -131,3 +131,46 @@
   background: var(--card-background);
   margin: 14px 40px 14px 40px;
 }
+
+@media screen and (max-width: 925px) {
+  .skillsSection__div--1 {
+    margin: 30px 0px 0px 0px;
+  }
+  .skillsSection__h3 {
+    margin: 0px;
+  }
+  .skillsSection__techCard {
+    width: calc(50% - 5px);
+    height: -webkit-fill-available;
+    aspect-ratio: 1/0.8;
+    padding: 14px;
+  }
+  .skillsSection__div--2 {
+    gap: 10px;
+  }
+  .techCard__p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    height: auto;
+    min-height: min-content;
+  }
+  .skillsSection__techCard .svg-inline--fa {
+    width: 60%;
+    height: 60%;
+    max-height: 80px;
+  }
+  .skillsSection__div--3 {
+    flex-direction: column;
+    padding: 0px;
+  }
+  .skillsSection__techsList {
+    padding-left: 24px;
+  }
+  .skillsSection__techsList__line {
+    width: 100%;
+    margin: 14px 0px 14px 0px;
+  }
+}

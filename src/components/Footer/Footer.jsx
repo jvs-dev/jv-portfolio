@@ -15,51 +15,7 @@ const Footer = () => {
             todos os direitos reservados
           </p>
         </div>
-        <div className="footer__div--1">
-          <h4 className="footer__listTitle">Socials</h4>
-          <ul className="footer__ul">
-            <li className="footer__li">
-              <Link>
-                <ion-icon name="logo-instagram"></ion-icon> Instagram
-              </Link>
-            </li>
-            <li className="footer__li">
-              <Link>
-                <ion-icon name="logo-linkedin"></ion-icon> Linkedin
-              </Link>
-            </li>
-            <li className="footer__li">
-              <Link>
-                <ion-icon name="logo-whatsapp"></ion-icon> Whatsapp
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        <div className="footer__div--2">
-          <h4 className="footer__listTitle">Navigation</h4>
-          <nav className="footer__nav">
-            <Link to={"#"} className="footer__nav__a">
-              Home
-            </Link>
-            <Link to={"#"} className="footer__nav__a">
-              About
-            </Link>
-            <Link to={"#"} className="footer__nav__a">
-              Projects
-            </Link>
-            <Link to={"#"} className="footer__nav__a">
-              Skills
-            </Link>
-            <Link to={"#"} className="footer__nav__a">
-              Blog
-            </Link>
-            <Link to={"#"} className="footer__nav__a">
-              Contact
-            </Link>
-          </nav>
-        </div>
-        <div className="footer__div--3">
+        <div className="footer__div--4">
           <Link to={"/"} className="header__logoLink">
             <img className="header__logo" src="jvs-logo.svg" alt="JOÃO SILVA" />
           </Link>
