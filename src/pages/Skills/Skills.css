@@ -141,6 +141,7 @@
   }
   .skillsSection__techCard {
     width: calc(50% - 5px);
+    max-width: 190px;
     height: -webkit-fill-available;
     aspect-ratio: 1/0.8;
     padding: 14px;

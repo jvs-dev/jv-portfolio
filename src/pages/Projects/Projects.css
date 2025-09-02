@@ -16,6 +16,7 @@
   align-items: center;
   justify-content: flex-end;
   width: 100%;
+  max-width: 950px;
   aspect-ratio: 1/0.6;
   max-height: 100vh;
   border-radius: 32px;
@@ -156,5 +157,39 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@media screen and (max-width: 925px) {
+  .projectWindowDiv {
+    height: calc(100vh - 80px);
+    max-height: 550px;
+    border-radius: 20px;
+    padding: 20px 0px;
+  }
+  .projectWindow__div--1 {
+    flex-direction: column-reverse;
+    padding: 0px 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .projectWindow__div--2 {
+    width: 100%;
+    gap: 15px;
+  }
+  .projectWindow__model {
+    position: absolute;
+    z-index: -2;
+    top: 20px;
+  }
+  .projectWindow__slideButton {
+    height: 38px;
+    width: 38px;
+    font-size: 20px;
+  }
+  .projectWindow__projectText {
+    font-size: 32px;
+    width: 100%;
+    text-wrap-style: auto;
   }
 }

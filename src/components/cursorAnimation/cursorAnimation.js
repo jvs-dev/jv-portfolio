@@ -33,6 +33,7 @@ window.addEventListener("mousemove", (event) => {
 })
 
 window.addEventListener("click", (event) => {
+    document.getElementById("clickAudio").volume = 0.5;
     document.getElementById("clickAudio").currentTime = 0;
     document.getElementById("clickAudio").play()
     let mouseX = event.clientX + window.pageXOffset;

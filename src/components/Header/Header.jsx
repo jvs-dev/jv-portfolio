@@ -6,9 +6,11 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__container">
-        <button className="header__resumeBtn" type="button">
-          <i className="bi bi-file-earmark-medical-fill"></i>
-        </button>
+        <a href="./Curriculo-Joao-Vitor-Santana.pdf" target="_blank">
+          <button className="header__resumeBtn" type="button">
+            <i className="bi bi-file-earmark-medical-fill"></i>
+          </button>
+        </a>
         <nav className="header__nav">
           <Link className="header__navLink active" to={"#"}>
             Home
@@ -20,11 +22,11 @@ const Header = () => {
             Tech Stacks
           </Link>
           <Link className="header__navLink" to={"#"}>
-            FAQ
+            Projects
           </Link>
           <span className="header__line"></span>
           <Link className="header__navLink" to={"#"}>
-            Projects
+            FAQ
           </Link>
         </nav>
       </div>

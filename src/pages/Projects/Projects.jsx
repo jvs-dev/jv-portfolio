@@ -28,7 +28,7 @@ const Projects = () => {
   }
 
   return (
-    <section className="projectsSection">
+    <section className="projectsSection" id="projects">
       <h2 className="experienceSection__title">
         My Projects<ion-icon name="cafe"></ion-icon>
       </h2>
