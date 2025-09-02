@@ -1,5 +1,5 @@
 #cursorCircle {
-  position: absolute;
+  position: fixed;
   height: 38px;
   width: 38px;
   border-radius: 100%;
@@ -21,6 +21,21 @@
   opacity: 0;
   animation: triangleAnimation 2s ease;
   transition: 2s;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.triangleClick {
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  left: 0;
+  top: 0;
+  border-right: 14px solid var(--primary-red);
+  border-top: 14px solid transparent;
+  opacity: 0;
+  animation: triangleAnimation 1s ease;
+  transition: 1s ease;
   pointer-events: none;
   z-index: -1;
 }

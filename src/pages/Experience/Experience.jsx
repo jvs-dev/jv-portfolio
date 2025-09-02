@@ -31,8 +31,11 @@ const Experience = () => {
           My Experience<ion-icon name="person"></ion-icon>
         </h2>
         <p className="experienceSection__text">
-          Lorem ipsum dolor sit amet. In vero tempore id quia inventore et
-          quidem rerum rem corporis quibusdam ut similique quia ut rerum
+          Olá! Eu sou João, desenvolvedor apaixonado por tecnologia e automação.
+          Tenho ampla experiencia na area de programação, com freelas projetos
+          individuais e em empresas como a EcoRecitec. Também faço parte do
+          programa Ford &#60;Enter&#62;, Curso de Programação Frontend em
+          conjunto com...
         </p>
         <button className="experienceSection__button" type="button">
           See More
