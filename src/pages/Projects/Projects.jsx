@@ -33,7 +33,7 @@ const Projects = () => {
         My Projects<ion-icon name="cafe"></ion-icon>
       </h2>
 
-      <div className="projectWindowDiv">        
+      <div className="projectWindowDiv">
         <img
           className={`projectWindow__banner ${animation && "sideAnime"}`}
           src={`./projects/project-${projectViwed}-banner.svg`}
@@ -86,6 +86,48 @@ const Projects = () => {
             <ion-icon name="chevron-forward-outline"></ion-icon>
           </button>
         </div>
+      </div>
+      <div className="projectWindow__buttonsDiv">
+        <button type="button" className="projectWindow__showButton active">
+          Cards
+          <ion-icon name="grid"></ion-icon>
+        </button>
+        <button type="button" className="projectWindow__showButton">
+          List
+          <ion-icon name="list"></ion-icon>
+        </button>
+      </div>
+
+      <div className="projectWindow__projectsList">
+        {texts.map((el, index) => (
+          <article
+            onClick={() => {
+              setAnimation(true);
+              setProjectViwed(index + 1);
+              setTimeout(() => {
+                setAnimation(false);
+              }, 1000);
+            }}
+            className={`projectWindow__projectCard ${
+              index + 1 == projectViwed ? "active" : ""
+            }`}
+            key={index}
+          >
+            <ion-icon name="eye-outline"></ion-icon>
+            <img
+              className="projectCard__projectImage"
+              src={`./projects/project-${index + 1}-banner.svg`}
+              alt="Project banner"
+            />
+            <div className="projectCard__div--1">
+              <img
+                className="projectCard__logo"
+                src={`./projects/project-${index + 1}-logo.svg`}
+                alt="Project logo"
+              />
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );

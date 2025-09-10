@@ -28,10 +28,7 @@ const Home = () => {
           <Link className="home__button button--2" to={"#"}>
             Talk Me
           </Link>
-        </div>
-        {/* <div className="home__div--2">
-            Colocar logos
-        </div> */}
+        </div>        
         <span className="home__downArrow">
           <ion-icon name="chevron-down-outline"></ion-icon>
         </span>

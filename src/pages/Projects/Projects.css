@@ -136,6 +136,106 @@
   animation: sideIn 1s ease;
 }
 
+.projectWindow__buttonsDiv {
+  width: 100%;
+  max-width: 950px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.projectWindow__showButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--white);
+  background: transparent;
+  padding: 10px 32px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: solid 2px var(--white);
+  outline-width: 0px;
+  width: fit-content;
+  transition: 0.3s;
+}
+
+.projectWindow__showButton.active {
+  background: var(--white);
+  color: var(--background);
+  border: solid 2px var(--white);
+}
+
+.projectWindow__showButton ion-icon {
+  font-size: 24px;
+}
+
+.projectWindow__projectsList {
+  width: 100%;
+  max-width: 950px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.projectWindow__projectCard {
+  position: relative;
+  width: calc(100% / 3);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.projectWindow__projectCard ion-icon {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  height: 22px;
+  width: 22px;
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--gradient);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.projectCard__div--1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #ffffff, #ffffff33, #ffffff);
+  transition: 0.3s ease;
+}
+
+.projectCard__logo {
+  max-width: calc(100% - 40px);
+}
+
+.projectWindow__projectCard.active {
+  border: solid 2px var(--primary-red);
+}
+
+.projectWindow__projectCard.active ion-icon {
+  opacity: 1;
+}
+
+.projectWindow__projectCard.active .projectCard__div--1 {
+  background: #ffffff00;
+  transition: 0.3s ease;
+}
+
 @keyframes sideIn {
   0% {
     opacity: 0;
