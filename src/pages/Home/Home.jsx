@@ -25,9 +25,9 @@ const Home = () => {
             <ion-icon name="logo-linkedin"></ion-icon>
             Linkedin
           </Link>
-          <Link className="home__button button--2" to={"#"}>
-            Talk Me
-          </Link>
+          <a className="home__button button--2" href={"https://linktr.ee/jvs_dev"} target="_blank">
+            Contact Me
+          </a>
         </div>        
         <span className="home__downArrow">
           <ion-icon name="chevron-down-outline"></ion-icon>

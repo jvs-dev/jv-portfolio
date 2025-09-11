@@ -12,22 +12,22 @@ const Header = () => {
           </button>
         </a>
         <nav className="header__nav">
-          <Link className="header__navLink active" to={"#"}>
+          <a className="header__navLink active" href={"#"}>
             Home
-          </Link>
-          <Link className="header__navLink" to={"#"}>
+          </a>
+          <a className="header__navLink" href="#about">
             About
-          </Link>
-          <Link className="header__navLink" to={"#"}>
+          </a>
+          <a className="header__navLink" href="#skills">
             Tech Stacks
-          </Link>
-          <Link className="header__navLink" to={"#"}>
+          </a>
+          <a className="header__navLink" href="#projects">
             Projects
-          </Link>
+          </a>
           <span className="header__line"></span>
-          <Link className="header__navLink" to={"#"}>
+          <a className="header__navLink" href="#contact">
             FAQ
-          </Link>
+          </a>
         </nav>
       </div>
       <Link to={"/"} className="header__logoLink">

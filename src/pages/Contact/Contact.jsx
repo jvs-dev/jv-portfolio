@@ -3,7 +3,7 @@ import "./Contact.css";
 
 const Contact = () => {
   return (
-    <section className="contactSection">
+    <section className="contactSection" id="contact">
       <h2 className="experienceSection__title">
         Contact Me <ion-icon name="mail-unread"></ion-icon>
       </h2>
@@ -49,32 +49,36 @@ const Contact = () => {
         </button>
       </form>
       <div className="contactSection__div--2">
-        <Link
-          to={"#"}
+        <a
+          href={"linkedin.com/in/joão-vitor-dev"}
+          target="_blank"
           className="contactSection__linkCard"
           style={{ "--hover-color": "#0e76a8 " }}
         >
           <ion-icon name="logo-linkedin"></ion-icon>
           <p className="contactSection__linkText">Linkedin</p>
-        </Link>
-        <Link
-          to={"#"}
+        </a>
+        <a
+          href={"https://github.com/jvs-dev"}
+          target="_blank"
           className="contactSection__linkCard"
           style={{ "--hover-color": "#000 " }}
         >
           <ion-icon name="logo-github"></ion-icon>
           <p className="contactSection__linkText">Github</p>
-        </Link>
-        <Link
-          to={"#"}
+        </a>
+        <a
+          href={"https://wa.me/71982451668"}
+          target="_blank"
           className="contactSection__linkCard"
           style={{ "--hover-color": "#25D366 " }}
         >
           <ion-icon name="logo-whatsapp"></ion-icon>
           <p className="contactSection__linkText">Whatsapp</p>
-        </Link>
-        <Link
-          to={"#"}
+        </a>
+        <a
+          href={"https://www.instagram.com/jvs.dev"}
+          target="_blank"
           className="contactSection__linkCard"
           style={{
             "--hover-color":
@@ -83,7 +87,7 @@ const Contact = () => {
         >
           <ion-icon name="logo-instagram"></ion-icon>
           <p className="contactSection__linkText">Instagram</p>
-        </Link>
+        </a>
       </div>
     </section>
   );

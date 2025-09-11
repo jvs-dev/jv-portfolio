@@ -92,7 +92,7 @@ const Skills = () => {
   }
 
   return (
-    <section className="skillsSection">
+    <section className="skillsSection" id="skills">
       <h2 className="experienceSection__title">
         My Skills <ion-icon name="flame"></ion-icon>
       </h2>

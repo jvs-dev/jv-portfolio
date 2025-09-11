@@ -13,12 +13,17 @@
   --text-font: "Itim", cursive;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: var(--text-font);
   background-color: var(--background);
   color: #ffffff;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {

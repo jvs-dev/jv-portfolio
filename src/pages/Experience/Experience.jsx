@@ -1,9 +1,10 @@
 import React from "react";
 import "./Experience.css";
+import { Link } from "react-router-dom";
 
 const Experience = () => {
   return (
-    <section className="experienceSection">
+    <section className="experienceSection" id="about">
       <div className="experienceSection__logosDiv">
         <div className="experienceSection__logoCard logoCard--column">
           <img src="/logos/ford.svg" alt="Logo Ford" />
@@ -31,15 +32,18 @@ const Experience = () => {
           My Experience<ion-icon name="person"></ion-icon>
         </h2>
         <p className="experienceSection__text">
-          Olá! Eu sou João, desenvolvedor apaixonado por tecnologia e automação.
-          Tenho ampla experiencia na area de programação, com freelas projetos
-          individuais e em empresas como a EcoRecitec. Também faço parte do
-          programa Ford &#60;Enter&#62;, Curso de Programação Frontend em
-          conjunto com...
+          Hello! My name is João, and I'm a developer who's passionate about
+          technology and automation. I have extensive programming experience
+          from both freelance and individual projects, as well as from my work
+          at companies like EcoRecitec. I'm also part of the Ford
+          &#60;Enter&#62; program, a Frontend Programming course in partnership
+          with...
         </p>
-        <button className="experienceSection__button" type="button">
-          See More
-        </button>
+        <Link to={"/MyHistory"}>
+          <button className="experienceSection__button" type="button">
+            See More
+          </button>
+        </Link>
       </div>
     </section>
   );

@@ -102,6 +102,7 @@
 
 .experienceSection__button {
   font-family: "Inter", sans-serif;
+  text-decoration: none;
   font-weight: 700;
   font-size: 18px;
   color: var(--background);

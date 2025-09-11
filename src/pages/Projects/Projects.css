@@ -179,13 +179,16 @@
   max-width: 950px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
 .projectWindow__projectCard {
   position: relative;
-  width: calc(100% / 3);
+  width: auto;
+  min-width: 310px;
+  max-width: 400px;
   height: auto;
   display: flex;
   align-items: center;
@@ -214,8 +217,7 @@
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(45deg, #ffffff, #ffffff33, #ffffff);
+  justify-content: center;  
   transition: 0.3s ease;
 }
 
