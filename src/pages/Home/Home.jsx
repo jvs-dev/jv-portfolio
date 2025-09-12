@@ -21,10 +21,10 @@ const Home = () => {
         <h1 className="home__title--2">João Vitor Santana</h1>
         <h2 className="home__title--3">Full-stack developer</h2>
         <div className="home__div--1">
-          <Link className="home__button" to={"#"}>
+          <a className="home__button" href="https://linkedin.com/in/joão-vitor-dev" target="_blank">
             <ion-icon name="logo-linkedin"></ion-icon>
             Linkedin
-          </Link>
+          </a>
           <a className="home__button button--2" href={"https://linktr.ee/jvs_dev"} target="_blank">
             Contact Me
           </a>

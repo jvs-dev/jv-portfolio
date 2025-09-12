@@ -1,6 +1,276 @@
 .historySection {
-   min-height: 100vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;      
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.historySection__div--1 {
+  width: 100%;
+  max-width: 100dvw;
+  padding: 70px 40px 30px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.historySection__div--2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 700px;
+}
+
+.history.home__title--2 {
+  line-height: 100%;
+  margin: 0px 0px 20px 0px;
+  text-align: left;
+}
+
+.historySection__myResume {
+  font-family: var(--text-font);
+  color: var(--white);
+  font-size: 24px;
+  padding: 0px 0px;
+  margin: 0px;
+  text-align: left;
+}
+
+.historySection__div--3 {
+  width: auto;
+  min-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--gradient);
+  padding: 0px 5px 5px 5px;
+  border-radius: 100%;
+}
+
+.historySection__div--3 img {
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  max-height: 400px;
+  object-fit: contain;
+  margin: 0px;
+  border-radius: 100%;
+  transform: translateY(-5px);
+}
+
+.historySection__line {
+  width: 250px;
+  height: 4px;
+  background: var(--gray);
+  margin: 0px 40px 20px 40px;
+}
+
+.historySection__historysDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 40px 80px 40px;
+  gap: 60px;
+}
+
+.historySection__historyCard {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.historyCard__div--1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 18px;
+  background: var(--card-background);
+  border: solid 3px var(--gray);
+  width: 40%;
+  min-width: 400px;
+  max-width: 40vw;
+}
+
+.historyCard__img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 9px;
+  border: solid 3px var(--gray);
+  cursor: pointer;
+}
+
+.historyCard__imgDescription {
+  font-family: var(--text-font);
+  color: var(--white);
+  font-size: 18px;
+  padding: 0px 10px;
+  margin: 0px;
+  text-align: center;
+}
+
+.historyCard__title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 2.7em;
+  line-height: 110%;
+  letter-spacing: 3px;
+  font-weight: lighter;
+  color: var(--title-white);
+  font-family: var(--title-font);
+  margin: 0;
+  text-align: left;
+  gap: 12px;
+}
+
+.historyCard__text {
+  font-family: var(--text-font);
+  color: var(--white);
+  font-size: 22px;
+  padding: 18px 0px 0px 0px;
+  margin: 0px;
+  text-align: left;
+}
+
+.historySection__certifiesDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 40px 40px 80px 40px;
+  gap: 20px;
+}
+
+.historySection__certifyCard {
+  width: calc(50% - 10px);
+  max-width: 490px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+}
+
+.certifyCard__div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 18px;
+  background: var(--card-background);
+  border: solid 3px var(--gray);
+}
+
+.certifyCard__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 9px;
+  border: solid 3px var(--gray);
+  cursor: pointer;
+}
+
+.certifyCard__title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: var(--white);
+  font-size: 24px;
+  padding: 0px 10px;
+  margin: 10px 0px 0px 0px;
+  text-align: center;
+}
+
+.certifyCard__date {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--light-gray);
+  padding: 0px 10px;
+  margin: 0px;
+  text-align: center;
+}
+
+@media screen and (max-width: 825px) {
+  .historySection__certifyCard {
+    width: 100%;
+  }
+  .historySection__div--1 {
+    flex-direction: column-reverse;
+    padding: 20px 20px 30px 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .historySection__div--3 {
+    width: auto;
+    min-width: 250px;
+  }
+  .historySection__div--3 img {
+    max-width: 250px;
+    max-height: 250px;
+  }
+  .historySection__div--2 {
+    align-items: center;
+  }
+  .history.home__title--2 {
+    text-align: center;
+  }
+  .historySection__myResume {
+    text-align: center;
+  }
+  .historySection__historysDiv {
+    padding: 20px 20px 50px 20px;
+    gap: 40px;
+  }
+
+  .historyCard__div--1 {
+    width: 100%;
+    max-width: calc(100vw - 40px);
+    min-width: auto;
+  }
+
+  .historySection__historyCard {
+    flex-direction: column !important;
+    gap: 10px;
+  }
+  .historyCard__div--2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .historyCard__title {
+    text-align: center;
+    font-size: 1.8em;
+    margin: 10px 0px 0px 0px;
+  }
+  .historyCard__text {
+    text-align: center;
+    padding: 0px;
+    font-size: 18px;
+  }
+  .historySection__certifiesDiv {
+    padding: 30px 20px 40px 20px;
+    gap: 25px;
+  }
+  .certifyCard__div {
+    padding: 10px;
+  }
 }

@@ -12,9 +12,9 @@ const Header = () => {
           </button>
         </a>
         <nav className="header__nav">
-          <a className="header__navLink active" href={"#"}>
+          <Link className="header__navLink active" to={"/"}>
             Home
-          </a>
+          </Link>
           <a className="header__navLink" href="#about">
             About
           </a>
