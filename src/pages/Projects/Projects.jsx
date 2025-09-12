@@ -7,6 +7,7 @@ const Projects = () => {
     "Responsive landing page for cat food",
     "Barber shop app with online scheduling",
     "Complete system for robotics classes",
+    "Website for advertising the new Ford Ranger.",
   ];
   const [projectViwed, setProjectViwed] = React.useState(1);
   const [animation, setAnimation] = useState(false);

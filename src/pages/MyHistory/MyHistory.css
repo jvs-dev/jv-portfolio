@@ -206,6 +206,29 @@
   text-align: center;
 }
 
+.certifiesDiv__viewMoreBtn {
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--background);
+  background: var(--title-white);
+  padding: 16px 50px;  
+  border-radius: 1000px;
+  cursor: pointer;
+  border: solid 2px transparent;
+  outline-width: 0px;
+  width: fit-content;
+  margin: 20px 0px 0px 0px;
+  transition: 0.3s;
+}
+
+.certifiesDiv__viewMoreBtn:hover {
+  color: var(--title-white);
+  background: transparent;
+  border: solid 2px var(--title-white);
+}
+
 @media screen and (max-width: 825px) {
   .historySection__certifyCard {
     width: 100%;

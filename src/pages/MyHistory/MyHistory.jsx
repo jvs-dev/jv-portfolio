@@ -6,6 +6,14 @@ import Footer from "../../components/Footer/Footer";
 import MusicButton from "../../components/MusicButton/MusicButton";
 
 const MyHistory = () => {
+  const [certifiesShow, setCertifiesShow] = React.useState(4);
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
+  React.useEffect(() => {
+    scrollToTop();
+  }, []);
   const historys = [
     {
       year: "2025",
@@ -26,11 +34,6 @@ const MyHistory = () => {
   ];
 
   const certifies = [
-    {
-      title: "Desenvolvimento de software - frontend",
-      src: "https://media.licdn.com/dms/image/v2/D4D22AQF9vtTsn0C_Qg/feedshare-shrink_2048_1536/B4DZfraE_pGgAw-/0/1752001171988?e=1760572800&v=beta&t=EyINzrN0floJrniWGEuyrqDklkbbMgXPCMfLdAmk4Pw",
-      date: "11/03/2025",
-    },
     {
       title: "React: Desenvolvendo com JavaScript",
       src: "https://media.licdn.com/dms/image/v2/D4D22AQF9vtTsn0C_Qg/feedshare-shrink_2048_1536/B4DZfraE_pGgAw-/0/1752001171988?e=1760572800&v=beta&t=EyINzrN0floJrniWGEuyrqDklkbbMgXPCMfLdAmk4Pw",
@@ -97,7 +100,7 @@ const MyHistory = () => {
         <div className="historySection__certifiesDiv">
           {certifies.map(
             (obj, index) =>
-              index < 4 && (
+              index < certifiesShow && (
                 <div className="historySection__certifyCard" key={index}>
                   <div className="certifyCard__div">
                     <img
@@ -110,6 +113,15 @@ const MyHistory = () => {
                   <p className="certifyCard__date">{obj.date}</p>
                 </div>
               )
+          )}
+          {certifiesShow < certifies.length && (
+            <button
+              type="button"
+              className="certifiesDiv__viewMoreBtn"
+              onClick={() => setCertifiesShow(certifiesShow + 4)}
+            >
+              See More
+            </button>
           )}
         </div>
       </section>

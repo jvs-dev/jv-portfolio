@@ -15,17 +15,17 @@ const Header = () => {
           <Link className="header__navLink active" to={"/"}>
             Home
           </Link>
-          <a className="header__navLink" href="#about">
+          <a className="header__navLink" href="/#about">
             About
           </a>
-          <a className="header__navLink" href="#skills">
+          <a className="header__navLink" href="/#skills">
             Tech Stacks
           </a>
-          <a className="header__navLink" href="#projects">
+          <a className="header__navLink" href="/#projects">
             Projects
           </a>
           <span className="header__line"></span>
-          <a className="header__navLink" href="#contact">
+          <a className="header__navLink" href="/#contact">
             FAQ
           </a>
         </nav>
