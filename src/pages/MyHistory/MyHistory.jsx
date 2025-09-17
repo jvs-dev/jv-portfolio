@@ -51,11 +51,7 @@ const MyHistory = () => {
             <h1 className="history home__title">This is</h1>
             <h1 className="history home__title--2">My History</h1>
             <p className="historySection__myResume">
-              Lorem ipsum dolor sit amet. Et placeat doloremque quo quaerat
-              labore ut alias dolorem aut galisum quia a explicabo laborum aut
-              nulla officiis sit ullam error. At laboriosam tempora At veniam
-              perferendis ut repellat tempora! Aut culpa explicabo id Quis rerum
-              ad sequi quis ut veniam vero ut odio odio non rerum tempore.
+              I’m João Vitor Santana, a full-stack developer passionate about creating solutions that combine technology, creativity, and real impact. My journey in programming started early, at the age of 14, exploring game development. Over time, I discovered in web development the opportunity to bring ideas to life and turn digital experiences into something remarkable. Throughout this journey, I worked as a robotics instructor, joined challenging projects in front-end and back-end, and have been diving deep into modern frameworks like Next.js and Angular. Today, I’m also part of the Ford <Enter> program at SENAI, where I continue to expand my knowledge in development and innovation. My goal is clear: to build intense and engaging interfaces that blend aesthetics, usability, and purpose. I believe technology should be functional, but also beautiful — something that both delights and solves real problems.
             </p>
           </div>
           <div className="historySection__div--3">
