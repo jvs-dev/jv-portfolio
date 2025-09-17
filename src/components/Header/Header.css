@@ -154,6 +154,7 @@
   }
   .header__container {
     display: none;
+    transition: 0s;
   }
   .header__container::after {
     display: none;
@@ -165,5 +166,41 @@
   }
   .menutoggle-btn {
     display: flex;
+  }
+  .header__container.active {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    gap: 20px;
+    padding: 20px;
+    width: 100dvw;
+    height: 100dvh;
+    border: solid 2px var(--gray);
+    background: var(--card-background);
+    z-index: 2;
+    border-radius: 0px;
+  }
+  .header__container.active::after {
+    display: none;
+  }
+  .header__nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .header__navLink {
+    font-size: 24px;
+    padding: 10px 40px;
+  }
+  .header__line {
+    display: none;
+  }
+  a .header__resumeBtn {
+    position: absolute;
+    left: 20px;
+    top: 20px;
   }
 }

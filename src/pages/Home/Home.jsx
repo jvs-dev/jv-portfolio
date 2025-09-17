@@ -15,7 +15,7 @@ const Home = () => {
     <main className="main">
       <div className="homeTopLine"></div>
       <Header />
-      <section className="homeSection">
+      <section className="homeSection" id="home">
         <img className="home__patternSvg" src="/backgrountPaternSvg.svg" />
         <h1 className="home__title">Hi there, I'm</h1>
         <h1 className="home__title--2">João Vitor Santana</h1>

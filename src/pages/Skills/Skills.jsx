@@ -52,7 +52,7 @@ const Skills = () => {
     {
       icon: <ion-icon className="techCard__icon" name="logo-github"></ion-icon>,
       name: "GITHUB",
-    },    
+    },
   ];
 
   const techsInPairs = [
@@ -115,18 +115,7 @@ const Skills = () => {
         <h3 className="skillsSection__h3">
           Techs And More <ion-icon name="rocket"></ion-icon>
         </h3>
-        <div className="skillsSection__div--3">
-          {/* <div className="skillsSection__div--4">
-            <ul className="skillsSection__techsList">
-              <li className="skillsSection__techsList__li">Teste1</li>
-            </ul>
-            <div className="skillsSection__techsList__line"></div>
-            <ul className="skillsSection__techsList">
-              <li className="skillsSection__techsList__li">Teste</li>
-            </ul>
-          </div> */}
-          {techLists}
-        </div>
+        <div className="skillsSection__div--3">{techLists}</div>
       </div>
     </section>
   );

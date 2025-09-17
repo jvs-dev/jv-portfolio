@@ -184,6 +184,13 @@
   gap: 10px;
 }
 
+.projectWindow__projectsList.listMode {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
 .projectWindow__projectCard {
   position: relative;
   width: auto;
@@ -217,16 +224,12 @@
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   transition: 0.3s ease;
 }
 
 .projectCard__logo {
   max-width: calc(100% - 40px);
-}
-
-.projectWindow__projectCard.active {
-  border: solid 2px var(--primary-red);
 }
 
 .projectWindow__projectCard.active ion-icon {
@@ -236,6 +239,38 @@
 .projectWindow__projectCard.active .projectCard__div--1 {
   background: #ffffff00;
   transition: 0.3s ease;
+}
+
+.projectWindow__projectCard.listMode {
+  width: 100%;
+  max-width: 950px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 0px;
+  border: solid 2px var(--gray);
+}
+
+.projectWindow__projectCard.listMode .projectCard__projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projectWindow__projectCard.listMode ion-icon {
+  top: auto;
+}
+.projectWindow__projectCard.listMode .projectCard__logo {
+  width: auto;
+  max-width: none;
+  height: calc(100% - 20px);
+}
+
+.projectWindow__projectCard.active {
+  border: solid 2px var(--primary-red);
 }
 
 @keyframes sideIn {

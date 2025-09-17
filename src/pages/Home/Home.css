@@ -197,7 +197,11 @@
 @media screen and (max-width: 925px) {
   .homeSection {
     height: auto;
-    min-height: 100vh;
+    min-height: auto;
+    padding: 50px 20px 20px 20px;
+  }
+  .home__downArrow {
+    display: none;
   }
   .home__title {
     font-size: 28px;

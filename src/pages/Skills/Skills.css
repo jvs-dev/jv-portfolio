@@ -167,6 +167,12 @@
     flex-direction: column;
     padding: 0px;
   }
+
+  .skillsSection__div--4 {
+    border-bottom: solid 6px var(--card-background);
+    padding: 20px 0px;
+  }
+
   .skillsSection__techsList {
     padding-left: 24px;
   }

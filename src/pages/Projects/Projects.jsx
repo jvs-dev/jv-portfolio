@@ -11,6 +11,7 @@ const Projects = () => {
   ];
   const [projectViwed, setProjectViwed] = React.useState(1);
   const [animation, setAnimation] = useState(false);
+  const [listView, setListView] = useState(false);
 
   function handleClick(goTo) {
     setAnimation(true);
@@ -89,17 +90,27 @@ const Projects = () => {
         </div>
       </div>
       <div className="projectWindow__buttonsDiv">
-        <button type="button" className="projectWindow__showButton active">
+        <button
+          type="button"
+          className={`projectWindow__showButton ${listView ? "" : "active"}`}
+          onClick={() => setListView(!listView)}
+        >
           Cards
           <ion-icon name="grid"></ion-icon>
         </button>
-        <button type="button" className="projectWindow__showButton">
+        <button
+          type="button"
+          className={`projectWindow__showButton ${listView ? "active" : ""}`}
+          onClick={() => setListView(!listView)}
+        >
           List
           <ion-icon name="list"></ion-icon>
         </button>
       </div>
 
-      <div className="projectWindow__projectsList">
+      <div
+        className={`projectWindow__projectsList ${listView ? "listMode" : ""}`}
+      >
         {texts.map((el, index) => (
           <article
             onClick={() => {
@@ -110,8 +121,8 @@ const Projects = () => {
               }, 1000);
             }}
             className={`projectWindow__projectCard ${
-              index + 1 == projectViwed ? "active" : ""
-            }`}
+              listView ? "listMode" : ""
+            } ${index + 1 == projectViwed ? "active" : ""}`}
             key={index}
           >
             <ion-icon name="eye-outline"></ion-icon>

@@ -142,5 +142,9 @@
   }
   .experienceSection__button {
     padding: 14px 29px;
-  }  
+  }
+  .experienceSection__text {    
+    padding: 0px;
+    margin-bottom: 10px;
+  }
 }
