@@ -20,15 +20,31 @@ const MyHistory = () => {
       title: "Ford Enter",
       description:
         "Lorem ipsum dolor sit amet. Et placeat doloremque quo quaerat labore ut alias dolorem aut galisum quia a explicabo laborum aut nulla officiis sit ullam error. At laboriosam tempora At veniam perferendis ut repellat tempora! Aut culpa explicabo id Quis rerum ad sequi quis ut veniam vero ut odio odio non rerum tempore.",
-      src: "https://media.licdn.com/dms/image/v2/D4D22AQFeuheWhHyZQw/feedshare-shrink_800/B4DZdneDGfGUAg-/0/1749787621503?e=1760572800&v=beta&t=7jMRiNmB9VCTYv94J6KsL0Dr2xlNhQlXVmZNirILbF0",
+      src: "./historyPhotos/photo1.jpeg",
       imgAlt: "Turma Ford Enter 3º Edital",
+    },
+    {
+      year: "2025",
+      title: "Nasa Space Apps Challenge",
+      description:
+        "Lorem ipsum dolor sit amet. Et placeat doloremque quo quaerat labore ut alias dolorem aut galisum quia a explicabo laborum aut nulla officiis sit ullam error. At laboriosam tempora At veniam perferendis ut repellat tempora! Aut culpa explicabo id Quis rerum ad sequi quis ut veniam vero ut odio odio non rerum tempore.",
+      src: "./historyPhotos/photo3.jpg",
+      imgAlt: "Nasa Space Apps Challenge - Time Ford Enter",
+    },
+    {
+      year: "2025",
+      title: "Circular Tech Skills 2025",
+      description:
+        "Lorem ipsum dolor sit amet. Et placeat doloremque quo quaerat labore ut alias dolorem aut galisum quia a explicabo laborum aut nulla officiis sit ullam error. At laboriosam tempora At veniam perferendis ut repellat tempora! Aut culpa explicabo id Quis rerum ad sequi quis ut veniam vero ut odio odio non rerum tempore.",
+      src: "./historyPhotos/photo4.jpg",
+      imgAlt: "Circular Tech Skills 2025 - Atuação direta na organização e credenciamento.",
     },
     {
       year: "2024",
       title: "Cubos Academy",
       description:
         "Lorem ipsum dolor sit amet. Et placeat doloremque quo quaerat labore ut alias dolorem aut galisum quia a explicabo laborum aut nulla officiis sit ullam error. At laboriosam tempora At veniam perferendis ut repellat tempora! Aut culpa explicabo id Quis rerum ad sequi quis ut veniam vero ut odio odio non rerum tempore.",
-      src: "https://media.licdn.com/dms/image/v2/D4D22AQGKwmE-Ul9hKQ/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1699070864706?e=1760572800&v=beta&t=r6LXQDaJ3cLmxeqosYsTATb_eO3vUZYHM6kgKJVn4JE",
+      src: "./historyPhotos/photo2.jpeg",
       imgAlt: "Mercado Livre + Cubos Academy - Vivence Beta Hub",
     },
   ];

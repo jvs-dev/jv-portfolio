@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Contact.css";
 import { useState } from "react";
+import Notification from "../../components/Notification/Notification";
 
 const Contact = () => {
   const [formObject, setFormObject] = useState({
@@ -9,8 +10,35 @@ const Contact = () => {
     subject: "",
     mailText: "",
   });
+
+  const [notification, setNotification] = useState({
+    isVisible: false,
+    message: "",
+    type: "success"
+  });
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  const showNotification = (message, type = "success") => {
+    setNotification({
+      isVisible: true,
+      message,
+      type
+    });
+
+    // Auto hide notification after 3 seconds
+    setTimeout(() => {
+      setNotification(prev => ({
+        ...prev,
+        isVisible: false
+      }));
+    }, 3000);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    setIsLoading(true);
 
     try {
       const sendEmailResponse = await fetch(
@@ -25,13 +53,23 @@ const Contact = () => {
       );
       if (sendEmailResponse.ok) {
         console.log("E-mail enviado com sucesso.");
+        showNotification("Mensagem enviada com sucesso!", "success");
+        setFormObject({
+          name: "",
+          email: "",
+          subject: "",
+          mailText: "",
+        });
       } else {
         console.error("Erro ao enviar e-mail:", await sendEmailResponse.text());
+        showNotification("Erro ao enviar mensagem. Tente novamente.", "error");
       }
     } catch (error) {
       console.error("Erro ao enviar requisição:", error);
+      showNotification("Erro de conexão. Verifique sua internet.", "error");
+    } finally {
+      setIsLoading(false);
     }
-    alert("Form submitted!");
   };
 
   return (
@@ -54,6 +92,7 @@ const Contact = () => {
                 setFormObject({ ...formObject, name: e.target.value })
               }
               required
+              disabled={isLoading}
             />
           </div>
         </label>
@@ -72,6 +111,8 @@ const Contact = () => {
                 setFormObject({ ...formObject, email: e.target.value })
               }
               required
+
+              disabled={isLoading}
             />
           </div>
         </label>
@@ -90,6 +131,8 @@ const Contact = () => {
                 setFormObject({ ...formObject, subject: e.target.value })
               }
               required
+
+              disabled={isLoading}
             />
           </div>
         </label>
@@ -108,11 +151,25 @@ const Contact = () => {
                 setFormObject({ ...formObject, mailText: e.target.value })
               }
               required
+
+              disabled={isLoading}
             ></textarea>
           </div>
         </label>
-        <button className="contactSection__submitBtn" type="submit">
-          Enviar
+        <button
+          className="contactSection__submitBtn"
+          type="submit"
+
+          disabled={isLoading}
+        >
+          {isLoading ? (
+            <>
+              <span className="loader"></span>
+              Enviando...
+            </>
+          ) : (
+            "Enviar"
+          )}
         </button>
       </form>
       <div className="contactSection__div--2">
@@ -156,6 +213,11 @@ const Contact = () => {
           <p className="contactSection__linkText">Instagram</p>
         </a>
       </div>
+      <Notification
+        message={notification.message}
+        isVisible={notification.isVisible}
+        type={notification.type}
+      />
     </section>
   );
 };

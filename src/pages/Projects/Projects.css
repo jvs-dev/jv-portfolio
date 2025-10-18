@@ -195,7 +195,7 @@
   position: relative;
   width: auto;
   min-width: 310px;
-  max-width: 400px;
+  max-width: calc(50% - 5px);
   height: auto;
   display: flex;
   align-items: center;
