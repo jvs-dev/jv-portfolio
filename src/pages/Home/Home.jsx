@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Home.css";
 import Header from "../../components/Header/Header";
 import { Link } from "react-router-dom";
@@ -12,7 +12,78 @@ import Footer from "../../components/Footer/Footer";
 import { useLanguage } from "../../contexts/LanguageContext";
 
 const Home = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const [showSecondLine, setShowSecondLine] = useState(false);
+  const [showThirdLine, setShowThirdLine] = useState(false);
+  const [firstLineComplete, setFirstLineComplete] = useState(false);
+  const [secondLineComplete, setSecondLineComplete] = useState(false);
+  const [thirdLineComplete, setThirdLineComplete] = useState(false);
+  
+  // Texts for typing animation
+  const firstLineText = "Hi there, I'm";
+  const secondLineText = "João Vitor Santana";
+  const thirdLineText = t('home.heroTitle');
+  
+  // State for typed texts
+  const [typedFirstLine, setTypedFirstLine] = useState('');
+  const [typedSecondLine, setTypedSecondLine] = useState('');
+  const [typedThirdLine, setTypedThirdLine] = useState('');
+  
+  // Typing effect for first line
+  useEffect(() => {
+    let index = 0;
+    const timer = setInterval(() => {
+      if (index <= firstLineText.length) {
+        setTypedFirstLine(firstLineText.slice(0, index));
+        index++;
+      } else {
+        clearInterval(timer);
+        setFirstLineComplete(true);
+        // Start second line animation after first line is complete
+        setShowSecondLine(true);
+      }
+    }, 100);
+    
+    return () => clearInterval(timer);
+  }, []);
+  
+  // Typing effect for second line
+  useEffect(() => {
+    if (!showSecondLine) return;
+    
+    let index = 0;
+    const timer = setInterval(() => {
+      if (index <= secondLineText.length) {
+        setTypedSecondLine(secondLineText.slice(0, index));
+        index++;
+      } else {
+        clearInterval(timer);
+        setSecondLineComplete(true);
+        // Start third line animation after second line is complete
+        setShowThirdLine(true);
+      }
+    }, 100);
+    
+    return () => clearInterval(timer);
+  }, [showSecondLine]);
+  
+  // Typing effect for third line
+  useEffect(() => {
+    if (!showThirdLine) return;
+    
+    let index = 0;
+    const timer = setInterval(() => {
+      if (index <= thirdLineText.length) {
+        setTypedThirdLine(thirdLineText.slice(0, index));
+        index++;
+      } else {
+        clearInterval(timer);
+        setThirdLineComplete(true);
+      }
+    }, 100);
+    
+    return () => clearInterval(timer);
+  }, [showThirdLine, thirdLineText]);
 
   return (
     <main className="main">
@@ -20,9 +91,22 @@ const Home = () => {
       <Header />
       <section className="homeSection" id="home">
         <img className="home__patternSvg" src="/backgrountPaternSvg.svg" />
-        <h1 className="home__title">Hi there, I'm</h1>
-        <h1 className="home__title--2">João Vitor Santana</h1>
-        <h2 className="home__title--3">{t('home.heroTitle')}</h2>
+        <h1 className="home__title">
+          {typedFirstLine}
+          {!firstLineComplete && <span className="cursor"></span>}
+        </h1>
+        {showSecondLine && (
+          <h1 className="home__title--2">
+            {typedSecondLine}
+            {!secondLineComplete && <span className="cursor"></span>}
+          </h1>
+        )}
+        {showThirdLine && (
+          <h2 className="home__title--3">
+            {typedThirdLine}
+            {!thirdLineComplete && <span className="cursor"></span>}
+          </h2>
+        )}
         <div className="home__div--1">
           <a className="home__button" href="https://linkedin.com/in/joão-vitor-dev" target="_blank">
             <ion-icon name="logo-linkedin"></ion-icon>

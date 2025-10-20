@@ -40,7 +40,7 @@
   font-family: var(--title-font);
   margin: 0;
   text-align: center;
-  animation: textAnimation 2s ease forwards;
+  /*animation: textAnimation 2s ease forwards;*/
 }
 
 .home__title--2 {
@@ -58,7 +58,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: var(--title-font);
-  animation: gradiendAnimation 3s linear infinite;
+  /*animation: gradiendAnimation 3s linear infinite;*/
   background-size: 300% 300%;
 }
 
@@ -71,9 +71,24 @@
   text-align: center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradiendAnimation 3s linear infinite;
+  /*animation: gradiendAnimation 3s linear infinite;*/
   background-size: 300% 300%;
   margin: 0px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.2em;
+  background-color: var(--white);
+  margin-left: 3px;
+  animation: blink 1s infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .home__subTitle {
@@ -174,6 +189,8 @@
   }
 }
 
+/* Removed textAnimation since we're implementing typing effect */
+/*
 @keyframes textAnimation {
   0% {
     opacity: 0;
@@ -184,6 +201,7 @@
     transform: translateY(0px);
   }
 }
+*/
 
 @keyframes linear-btn-animation {
   0% {
