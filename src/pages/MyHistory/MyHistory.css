@@ -165,6 +165,7 @@
   align-items: center;
   justify-content: center;
   gap: 0px;
+  position: relative;
 }
 
 .certifyCard__div {
@@ -175,6 +176,12 @@
   border-radius: 18px;
   background: var(--card-background);
   border: solid 3px var(--gray);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.certifyCard__div:hover {
+  transform: translateY(-5px);
 }
 
 .certifyCard__img {
@@ -184,6 +191,41 @@
   border-radius: 9px;
   border: solid 3px var(--gray);
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.certifyCard__img:hover {
+  border-color: var(--primary-red);
+}
+
+.certifyCard__expandBtn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: var(--gradient);
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.certifyCard__div:hover .certifyCard__expandBtn {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.certifyCard__expandBtn:hover {
+  background: var(--primary-red);
+  transform: scale(1.2) !important;
 }
 
 .certifyCard__title {
@@ -194,6 +236,7 @@
   padding: 0px 10px;
   margin: 10px 0px 0px 0px;
   text-align: center;
+  text-transform: capitalize;
 }
 
 .certifyCard__date {
@@ -213,7 +256,7 @@
   font-size: 18px;
   color: var(--background);
   background: var(--title-white);
-  padding: 16px 50px;  
+  padding: 16px 50px;
   border-radius: 1000px;
   cursor: pointer;
   border: solid 2px transparent;
@@ -233,6 +276,7 @@
   .historySection__certifyCard {
     width: 100%;
   }
+
   .historySection__div--1 {
     flex-direction: column-reverse;
     padding: 20px 20px 30px 20px;
@@ -241,23 +285,29 @@
     text-align: center;
     gap: 20px;
   }
+
   .historySection__div--3 {
     width: auto;
     min-width: 250px;
   }
+
   .historySection__div--3 img {
     max-width: 250px;
     max-height: 250px;
   }
+
   .historySection__div--2 {
     align-items: center;
   }
+
   .history.home__title--2 {
     text-align: center;
   }
+
   .historySection__myResume {
     text-align: center;
   }
+
   .historySection__historysDiv {
     padding: 20px 20px 50px 20px;
     gap: 40px;
@@ -273,27 +323,42 @@
     flex-direction: column !important;
     gap: 10px;
   }
+
   .historyCard__div--2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+
   .historyCard__title {
     text-align: center;
     font-size: 1.8em;
     margin: 10px 0px 0px 0px;
   }
+
   .historyCard__text {
     text-align: center;
     padding: 0px;
     font-size: 18px;
   }
+
   .historySection__certifiesDiv {
     padding: 30px 20px 40px 20px;
     gap: 25px;
   }
+
   .certifyCard__div {
     padding: 10px;
+  }
+
+  .certifyCard__expandBtn {
+    opacity: 1;
+    top: 25px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    opacity: 0.9;
   }
 }

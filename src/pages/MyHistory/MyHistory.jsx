@@ -5,10 +5,12 @@ import { Link } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import MusicButton from "../../components/MusicButton/MusicButton";
 import { useLanguage } from "../../contexts/LanguageContext";
+import CertificateModal from "../../components/CertificateModal/CertificateModal";
 
 const MyHistory = () => {
   const { t } = useLanguage();
   const [certifiesShow, setCertifiesShow] = React.useState(4);
+  const [selectedCertificate, setSelectedCertificate] = React.useState(null);
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
@@ -49,11 +51,139 @@ const MyHistory = () => {
 
   const certifies = [
     {
-      title: "React: Desenvolvendo com JavaScript",
-      src: "https://media.licdn.com/dms/image/v2/D4D22AQF9vtTsn0C_Qg/feedshare-shrink_2048_1536/B4DZfraE_pGgAw-/0/1752001171988?e=1760572800&v=beta&t=EyINzrN0floJrniWGEuyrqDklkbbMgXPCMfLdAmk4Pw",
-      date: "08/07/2025",
+      title: "oficina de preparaçao integral para o mundo do trabalho",
+      src: "./certifies/c1.png",
+      date: "13/06/2025",
+    },
+    {
+      title: "Desenvolvimento de Software - Front-end",
+      src: "./certifies/c41.png",
+      date: "11/03/2025",
+    },
+    {
+      title: "Imersão Beta Hub by Mercado Livre",
+      src: "./certifies/c21.png",
+      date: "07/02/2024",
+    },
+    {
+      title: "trilha Fundamentar do Discover",
+      src: "./certifies/c25.png",
+      date: "13/01/2023",
+    },
+    {
+      title: "técnico em desenvolvimento de sistemas, eixo tecnológico informação e comunicação",
+      src: "./certifies/c20.png",
+      date: "03/09/2025",
+    },
+    {
+      title: "react: estilize componentes com styled components e manipule arquivos estáticos",
+      src: "./certifies/c2.png",
+      date: "12/08/2025",
+    },
+    {
+      title: "",
+      src: "./certifies/c3.png",
+      date: "",
+    },
+    {
+      title: "",
+      src: "./certifies/c4.png",
+      date: "",
+    },
+    {
+      title: "",
+      src: "./certifies/c5.png",
+      date: "",
+    },
+    {
+      title: "",
+      src: "./certifies/c6.png",
+      date: "",
+    },
+    {
+      title: "",
+      src: "./certifies/c7.png",
+      date: "",
+    },
+    {
+      title: "",
+      src: "./certifies/c8.png",
+      date: "",
+    },
+    {
+      title: "",
+      src: "./certifies/c9.png",
+      date: "",
+    },
+    {
+      title: "",
+      src: "./certifies/c10.png",
+      date: "",
+    },
+    {
+      title: "",
+      src: "./certifies/c11.png",
+      date: "",
+    },
+    {
+      title: "",
+      src: "./certifies/c12.png",
+      date: "",
+    },
+    {
+      title: "",
+      src: "./certifies/c13.png",
+      date: "",
+    },
+    {
+      title: "",
+      src: "./certifies/c14.png",
+      date: "",
+    },
+    {
+      title: "",
+      src: "./certifies/c22.png",
+      date: "",
+    },
+    {
+      title: "",
+      src: "./certifies/c27.png",
+      date: "",
+    },
+    {
+      title: "",
+      src: "./certifies/c28.png",
+      date: "",
+    },
+    {
+      title: "",
+      src: "./certifies/c30.png",
+      date: "",
+    },
+    {
+      title: "",
+      src: "./certifies/c35.png",
+      date: "",
+    },
+    {
+      title: "",
+      src: "./certifies/c36.png",
+      date: "",
+    },
+    {
+      title: "",
+      src: "./certifies/c37.png",
+      date: "",
     },
   ];
+
+  const openCertificateModal = (certificate) => {
+    setSelectedCertificate(certificate);
+  };
+
+  const closeCertificateModal = () => {
+    setSelectedCertificate(null);
+  };
 
   return (
     <main className="main">
@@ -117,7 +247,15 @@ const MyHistory = () => {
                       className="certifyCard__img"
                       src={obj.src}
                       alt={obj.title}
+                      onClick={() => openCertificateModal(obj)}
                     />
+                    <button 
+                      className="certifyCard__expandBtn"
+                      onClick={() => openCertificateModal(obj)}
+                      title="Expandir certificado"
+                    >
+                      <ion-icon name="expand-outline"></ion-icon>
+                    </button>
                   </div>
                   <p className="certifyCard__title">{obj.title}</p>
                   <p className="certifyCard__date">{obj.date}</p>
@@ -137,6 +275,12 @@ const MyHistory = () => {
       </section>
       <MusicButton />
       <Footer />
+      
+      {/* Certificate Modal */}
+      <CertificateModal 
+        certificate={selectedCertificate} 
+        onClose={closeCertificateModal} 
+      />
     </main>
   );
 };

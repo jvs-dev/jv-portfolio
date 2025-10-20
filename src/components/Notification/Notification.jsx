@@ -23,7 +23,7 @@ const Notification = ({ message, isVisible, type }) => {
             className={`notification notification--${type} notification--visible`}
          >
             <div className="notification__content">
-               <ion-icon className="notification__icon" name="checkmark-circle-outline"></ion-icon>
+               {type === "success" ? <ion-icon className="notification__icon" name="checkmark-circle-outline"></ion-icon> : <ion-icon className="notification__icon" name="close-outline"></ion-icon>}
                <span className="notification__message">{message}</span>
             </div>
          </div>
