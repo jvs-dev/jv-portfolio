@@ -6,6 +6,7 @@
   justify-content: space-between;
   align-items: center;
   background: var(--black);
+  z-index: 3;
 }
 
 .footer__topLine {

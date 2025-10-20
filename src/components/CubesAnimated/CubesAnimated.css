@@ -25,30 +25,38 @@
 .cube.cube1 {
   animation: cubeAnimation1 4s ease-in-out infinite;
 }
+
 .cube.cube2 {
   animation: cubeAnimation2 4s ease-in-out infinite;
   border-radius: 100%;
 }
+
 .cube.cube3 {
   animation: cubeAnimation3 4s ease-in-out infinite;
 }
+
 .cube.cube4 {
   animation: cubeAnimation4 4s ease-in-out infinite;
   border-radius: 100%;
 }
+
 @keyframes cubeAnimation1 {
   0% {
     transform: translateY(0) rotate(90deg);
   }
+
   15% {
     transform: translateY(calc(-100% - 20px));
   }
+
   40% {
     transform: translateY(calc(-100% - 20px)) translateX(calc(100% + 20px));
   }
+
   60% {
     transform: translateY(0) translateX(calc(100% + 20px));
   }
+
   100% {
     transform: translateY(0) rotate(0deg);
   }
@@ -58,20 +66,25 @@
   0% {
     transform: translateY(0);
   }
+
   28% {
     transform: translateX(calc(-100% - 20px));
   }
+
   40% {
     transform: translateX(calc(-100% - 20px)) translateY(calc(-100% - 20px));
     border-radius: 100%;
   }
+
   60% {
     transform: translateX(calc(100% + 18px)) translateY(calc(-100% - 20px));
   }
+
   80% {
     transform: translateX(calc(100% + 18px)) translateY(0);
     border-radius: 14px;
   }
+
   100% {
     transform: translateX(0) translateY(0);
   }
@@ -81,21 +94,27 @@
   0% {
     transform: translateY(0);
   }
+
   30% {
     transform: translateX(calc(-100% - 20px)) translateY(0);
   }
+
   40% {
     transform: translateX(calc(-100% - 20px)) translateY(0);
   }
+
   60% {
     transform: translateX(calc(-100% - 20px)) translateY(calc(100% + 20px));
   }
+
   80% {
     transform: translateX(0) translateY(calc(100% + 20px));
   }
+
   94% {
     transform: translateX(0) translateY(calc(100% + 20px));
   }
+
   100% {
     transform: translateX(0) translateY(0);
   }
@@ -105,15 +124,19 @@
   0% {
     transform: translateY(0);
   }
+
   30% {
     transform: translateX(calc(-100% - 20px));
   }
+
   60% {
     transform: translateY(0) translateX(0);
   }
+
   80% {
     transform: translateY(0) translateX(0);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -122,5 +145,9 @@
 @media screen and (max-width: 925px) {
   .cube {
     font-size: 8vw;
+  }
+
+  .cubesAnimatedDiv {    
+    margin-bottom: 40px;
   }
 }

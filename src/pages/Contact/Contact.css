@@ -7,6 +7,18 @@
   padding: 62px 20px 20px 20px;
 }
 
+.experienceSection__title.noMargin {
+  margin: 0px;
+}
+
+.experienceSection__subTitle {
+  font-family: var(--text-font);
+  font-size: 20px;
+  margin: 14px 0px 0px 0px;
+  color: var(--text-font);
+  text-align: center;
+}
+
 .contactSection__form {
   display: flex;
   flex-direction: column;
@@ -149,6 +161,7 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -199,15 +212,18 @@
   .contactSection__form {
     padding: 40px 0px;
   }
+
   .contactSection__submitBtn {
     border-radius: 1000px;
     font-size: 20px;
   }
+
   .contactSection__div--2 {
     flex-wrap: wrap;
     width: 100%;
     gap: 10px;
   }
+
   .contactSection__linkCard {
     width: calc(50% - 5px);
     border-radius: 16px;

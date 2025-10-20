@@ -12,7 +12,7 @@ const Contact = () => {
     subject: "",
     mailText: "",
   });
-  
+
   const [notification, setNotification] = useState({
     isVisible: false,
     message: "",
@@ -28,7 +28,7 @@ const Contact = () => {
       message,
       type
     });
-    
+
     // Auto hide notification after 3 seconds
     setTimeout(() => {
       setNotification(prev => ({
@@ -40,7 +40,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     // Set loading state
     setIsLoading(true);
 
@@ -58,9 +58,9 @@ const Contact = () => {
       if (sendEmailResponse.ok) {
         console.log("E-mail enviado com sucesso.");
         showNotification(
-          language === 'pt' ? 
-          "Mensagem enviada com sucesso!" : 
-          "Message sent successfully!", 
+          language === 'pt' ?
+            "Mensagem enviada com sucesso!" :
+            "Message sent successfully!",
           "success"
         );
         // Reset form
@@ -73,18 +73,18 @@ const Contact = () => {
       } else {
         console.error("Erro ao enviar e-mail:", await sendEmailResponse.text());
         showNotification(
-          language === 'pt' ? 
-          "Erro ao enviar mensagem. Tente novamente." : 
-          "Failed to send message. Please try again.", 
+          language === 'pt' ?
+            "Erro ao enviar mensagem. Tente novamente." :
+            "Failed to send message. Please try again.",
           "error"
         );
       }
     } catch (error) {
       console.error("Erro ao enviar requisição:", error);
       showNotification(
-        language === 'pt' ? 
-        "Erro de conexão. Verifique sua internet." : 
-        "Connection error. Please check your internet.", 
+        language === 'pt' ?
+          "Erro de conexão. Verifique sua internet." :
+          "Connection error. Please check your internet.",
         "error"
       );
     } finally {
@@ -95,9 +95,10 @@ const Contact = () => {
 
   return (
     <section className="contactSection" id="contact">
-      <h2 className="experienceSection__title">
+      <h2 className="experienceSection__title noMargin">
         {t('contact.title')} <ion-icon name="mail-unread"></ion-icon>
       </h2>
+      <p className="experienceSection__subTitle">{t('contact.subTitle')}</p>
       <form onSubmit={(e) => handleSubmit(e)} className="contactSection__form">
         <label className="contactSection__inputGroup" htmlFor="name">
           {t('contact.nameLabel')}
@@ -178,8 +179,8 @@ const Contact = () => {
             ></textarea>
           </div>
         </label>
-        <button 
-          className="contactSection__submitBtn" 
+        <button
+          className="contactSection__submitBtn"
           type="submit"
           // Disable button when loading
           disabled={isLoading}
@@ -236,7 +237,7 @@ const Contact = () => {
           <p className="contactSection__linkText">Instagram</p>
         </a>
       </div>
-      <Notification 
+      <Notification
         message={notification.message}
         isVisible={notification.isVisible}
         type={notification.type}

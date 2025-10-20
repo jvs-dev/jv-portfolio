@@ -89,7 +89,14 @@ const Home = () => {
     <main className="main">
       <div className="homeTopLine"></div>
       <Header />
-      <section className="homeSection" id="home">
+      <section className="homeSection" id="home">        
+        <div className="background-circles">
+          <div className="circle circle-1"></div>
+          <div className="circle circle-2"></div>
+          <div className="circle circle-3"></div>
+          <div className="circle circle-4"></div>
+          <div className="circle circle-5"></div>
+        </div>
         <img className="home__patternSvg" src="/backgrountPaternSvg.svg" />
         <h1 className="home__title">
           {typedFirstLine}

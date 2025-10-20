@@ -31,6 +31,7 @@ const pt = {
   // Contact page translations
   contact: {
     title: "Contate-me",
+    subTitle: "Gosto muito de receber novas mensagens! 😊",
     nameLabel: "Nome",
     namePlaceholder: "Digite seu nome",
     emailLabel: "Email",

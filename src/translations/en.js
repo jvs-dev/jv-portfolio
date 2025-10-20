@@ -8,13 +8,13 @@ const en = {
     contact: "FAQ",
     resume: "Resume"
   },
-  
+
   // Footer translations
   footer: {
     thanks: "Thanks For View All!",
     rights: "© 2025 João Vitor Santana da Silva\nAll rights reserved"
   },
-  
+
   // Home page translations
   home: {
     heroTitle: "Full Stack Developer",
@@ -27,10 +27,11 @@ const en = {
     projectsTitle: "Featured Projects",
     contactTitle: "Get In Touch"
   },
-  
+
   // Contact page translations
   contact: {
     title: "Contact Me",
+    subTitle: "I really enjoy receiving new messages! 😊",
     nameLabel: "Name",
     namePlaceholder: "Enter your name",
     emailLabel: "Email",
@@ -45,7 +46,7 @@ const en = {
     errorMessage: "Failed to send message. Please try again.",
     connectionErrorMessage: "Connection error. Please check your internet."
   },
-  
+
   // MyHistory page translations
   myHistory: {
     title: "This is",
