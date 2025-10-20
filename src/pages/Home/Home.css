@@ -289,20 +289,6 @@
   }
 }
 
-/* Removed textAnimation since we're implementing typing effect */
-/*
-@keyframes textAnimation {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-*/
-
 @keyframes linear-btn-animation {
   0% {
     background-position: 100% 50%;
@@ -343,6 +329,7 @@
   .home__div--1 {
     flex-direction: column;
     width: 100%;
+    margin: 40px 0px;
   }
 
   .home__button {
@@ -350,7 +337,10 @@
     max-width: 460px;
   }
 
-  /* Adjust circles for mobile */
+  .circle {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
   .circle-1 {
     width: 80px;
     height: 80px;
