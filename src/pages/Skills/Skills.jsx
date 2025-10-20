@@ -11,7 +11,7 @@ const Skills = () => {
     {
       icon: <ion-icon className="techCard__icon" name="logo-html5"></ion-icon>,
       name: "HTML",
-      color: "#E34C26",    
+      color: "#E34C26",
     },
     {
       icon: <ion-icon className="techCard__icon" name="logo-css3"></ion-icon>,

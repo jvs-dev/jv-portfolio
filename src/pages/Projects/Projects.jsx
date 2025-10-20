@@ -5,13 +5,49 @@ import { useLanguage } from "../../contexts/LanguageContext";
 
 const Projects = () => {
   const { t } = useLanguage();
-  
-  const texts = [
-    "Responsive landing page for cat food",
-    "Barber shop app with online scheduling",
-    "Complete system for robotics classes",
-    "Website for advertising the new Ford Ranger.",
-  ];
+
+  const projects = [
+    {
+      title: "Responsive landing page for cat food",
+      description: "A website for a cat food company.",
+      webLink: "https://catspy-omega.vercel.app",
+      image: "./projects/project-1-banner.svg",
+      logo: "./projects/project-1-logo.svg",
+      model: "./projects/project-1-model.svg",
+      gitHubLink: "https://github.com/jvs-dev/catspy",
+      languageTags: ["HTML", "CSS", "JavaScript"],
+    },
+    {
+      title: "Barber shop app with online scheduling",
+      description: "A website for a barber shop.",
+      webLink: "https://lio-hairstyle.vercel.app",
+      image: "./projects/project-2-banner.svg",
+      model: "./projects/project-2-model.svg",
+      logo: "./projects/project-2-logo.svg",
+      gitHubLink: "https://github.com/jvs-dev/lio-hairstyle-web",
+      languageTags: ["HTML", "CSS", "JavaScript"],
+    },
+    {
+      title: "Complete system for robotics classes",
+      description: "A platform for teaching programming through robots.",
+      webLink: "https://makeroom.vercel.app",
+      image: "./projects/project-3-banner.svg",
+      logo: "./projects/project-3-logo.svg",
+      model: "./projects/project-3-model.svg",
+      gitHubLink: "https://github.com/jvs-dev/Makeroom",
+      languageTags: ["HTML", "CSS", "JavaScript"],
+    },
+    {
+      title: "Website for advertising the new Ford Ranger.",
+      description: "A website for Ford Enter.",
+      webLink: "https://jvs-dev-desafio-ford.vercel.app",
+      image: "./projects/project-2-banner.svg",
+      model: "./projects/project-2-model.svg",
+      logo: "./projects/project-2-logo.svg",
+      gitHubLink: "https://github.com/jvs-dev/DESAFIO-HTML-E-CSS",
+      languageTags: ["HTML", "CSS", "JavaScript"]
+    },
+  ]
   const [projectViwed, setProjectViwed] = React.useState(1);
   const [animation, setAnimation] = useState(false);
   const [listView, setListView] = useState(false);
@@ -19,8 +55,8 @@ const Projects = () => {
   function handleClick(goTo) {
     setAnimation(true);
     if (projectViwed == 1 && goTo == "back") {
-      setProjectViwed(texts.length);
-    } else if (projectViwed == texts.length && goTo == "forward") {
+      setProjectViwed(projects.length);
+    } else if (projectViwed == projects.length && goTo == "forward") {
       setProjectViwed(1);
     } else {
       setProjectViwed((lastValue) =>
@@ -54,16 +90,14 @@ const Projects = () => {
               />
             </Link>
             <h2
-              className={`projectWindow__projectText ${
-                animation && "sideAnime"
-              }`}
+              className={`projectWindow__projectText ${animation && "sideAnime"
+                }`}
             >
-              {texts[projectViwed - 1]}
+              {projects[projectViwed - 1].title}
             </h2>
             <button
-              className={`projectWindow__viewButton ${
-                animation && "sideAnime"
-              }`}
+              className={`projectWindow__viewButton ${animation && "sideAnime"
+                }`}
               type="button"
             >
               View
@@ -114,7 +148,7 @@ const Projects = () => {
       <div
         className={`projectWindow__projectsList ${listView ? "listMode" : ""}`}
       >
-        {texts.map((el, index) => (
+        {projects.map((el, index) => (
           <article
             onClick={() => {
               setAnimation(true);
@@ -123,9 +157,8 @@ const Projects = () => {
                 setAnimation(false);
               }, 1000);
             }}
-            className={`projectWindow__projectCard ${
-              listView ? "listMode" : ""
-            } ${index + 1 == projectViwed ? "active" : ""}`}
+            className={`projectWindow__projectCard ${listView ? "listMode" : ""
+              } ${index + 1 == projectViwed ? "active" : ""}`}
             key={index}
           >
             <ion-icon name="eye-outline"></ion-icon>

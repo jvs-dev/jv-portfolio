@@ -22,12 +22,10 @@
   border-radius: 32px;
   overflow: hidden;
   padding: 24px 0px;
-  background: linear-gradient(
-    -45deg,
-    var(--card-background) 50%,
-    var(--gray),
-    var(--card-background) 60%
-  );
+  background: linear-gradient(-45deg,
+      var(--card-background) 50%,
+      var(--gray),
+      var(--card-background) 60%);
   background-size: 300% 300%;
   animation: loadingAnimation 1s linear infinite;
   z-index: 0;
@@ -196,6 +194,7 @@
   width: auto;
   min-width: 310px;
   max-width: calc(50% - 5px);
+  border: solid 2px transparent;
   height: auto;
   display: flex;
   align-items: center;
@@ -263,6 +262,7 @@
 .projectWindow__projectCard.listMode ion-icon {
   top: auto;
 }
+
 .projectWindow__projectCard.listMode .projectCard__logo {
   width: auto;
   max-width: none;
@@ -278,10 +278,12 @@
     opacity: 0;
     transform: translateX(-10px);
   }
+
   50% {
     opacity: 0;
     transform: translateX(-10px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0px);
@@ -292,6 +294,7 @@
   0% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -304,26 +307,31 @@
     border-radius: 20px;
     padding: 20px 0px;
   }
+
   .projectWindow__div--1 {
     flex-direction: column-reverse;
     padding: 0px 20px;
     align-items: center;
     justify-content: center;
   }
+
   .projectWindow__div--2 {
     width: 100%;
     gap: 15px;
   }
+
   .projectWindow__model {
     position: absolute;
     z-index: -2;
     top: 20px;
   }
+
   .projectWindow__slideButton {
     height: 38px;
     width: 38px;
     font-size: 20px;
   }
+
   .projectWindow__projectText {
     font-size: 32px;
     width: 100%;
