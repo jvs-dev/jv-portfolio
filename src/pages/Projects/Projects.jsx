@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "./Projects.css";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const Projects = () => {
+  const { t } = useLanguage();
+  
   const texts = [
     "Responsive landing page for cat food",
     "Barber shop app with online scheduling",
@@ -32,7 +35,7 @@ const Projects = () => {
   return (
     <section className="projectsSection" id="projects">
       <h2 className="experienceSection__title">
-        My Projects<ion-icon name="cafe"></ion-icon>
+        {t('home.projectsTitle')}<ion-icon name="cafe"></ion-icon>
       </h2>
 
       <div className="projectWindowDiv">

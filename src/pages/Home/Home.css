@@ -214,8 +214,7 @@
     letter-spacing: 2px;
   }
   .home__patternSvg {
-    top: auto;
-    height: 65%;
+    top: auto;    
   }
   .home__div--1 {
     flex-direction: column;

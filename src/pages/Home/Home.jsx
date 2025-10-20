@@ -9,8 +9,11 @@ import Projects from "../Projects/Projects";
 import Skills from "../Skills/Skills";
 import Contact from "../Contact/Contact";
 import Footer from "../../components/Footer/Footer";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const Home = () => {
+  const { t } = useLanguage();
+
   return (
     <main className="main">
       <div className="homeTopLine"></div>
@@ -19,14 +22,14 @@ const Home = () => {
         <img className="home__patternSvg" src="/backgrountPaternSvg.svg" />
         <h1 className="home__title">Hi there, I'm</h1>
         <h1 className="home__title--2">João Vitor Santana</h1>
-        <h2 className="home__title--3">Full-stack developer</h2>
+        <h2 className="home__title--3">{t('home.heroTitle')}</h2>
         <div className="home__div--1">
           <a className="home__button" href="https://linkedin.com/in/joão-vitor-dev" target="_blank">
             <ion-icon name="logo-linkedin"></ion-icon>
             Linkedin
           </a>
           <a className="home__button button--2" href={"https://linktr.ee/jvs_dev"} target="_blank">
-            Contact Me
+            {t('home.heroCta')}
           </a>
         </div>        
         <span className="home__downArrow">

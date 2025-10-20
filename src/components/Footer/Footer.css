@@ -123,6 +123,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
+  gap: 20px;
 }
 
 @media screen and (max-width: 925px) {
@@ -138,5 +139,6 @@
   }
   .footer__div--4 {
     margin: 20px 0px 40px 0px;
+    align-items: center;
   }
 }

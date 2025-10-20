@@ -2,8 +2,11 @@ import React from "react";
 import "./Skills.css";
 import { faJava, faNpm, faYarn } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const Skills = () => {
+  const { t } = useLanguage();
+  
   const skillsObj = [
     {
       icon: <ion-icon className="techCard__icon" name="logo-html5"></ion-icon>,
@@ -94,7 +97,7 @@ const Skills = () => {
   return (
     <section className="skillsSection" id="skills">
       <h2 className="experienceSection__title">
-        My Skills <ion-icon name="flame"></ion-icon>
+        {t('home.skillsTitle')} <ion-icon name="flame"></ion-icon>
       </h2>
 
       <div className="skillsSection__div--1">

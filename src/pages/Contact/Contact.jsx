@@ -2,21 +2,24 @@ import { Link } from "react-router-dom";
 import "./Contact.css";
 import { useState } from "react";
 import Notification from "../../components/Notification/Notification";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const Contact = () => {
+  const { t, language } = useLanguage();
   const [formObject, setFormObject] = useState({
     name: "",
     email: "",
     subject: "",
     mailText: "",
   });
-
+  
   const [notification, setNotification] = useState({
     isVisible: false,
     message: "",
     type: "success"
   });
 
+  // Add loading state
   const [isLoading, setIsLoading] = useState(false);
 
   const showNotification = (message, type = "success") => {
@@ -25,7 +28,7 @@ const Contact = () => {
       message,
       type
     });
-
+    
     // Auto hide notification after 3 seconds
     setTimeout(() => {
       setNotification(prev => ({
@@ -37,7 +40,8 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    
+    // Set loading state
     setIsLoading(true);
 
     try {
@@ -53,7 +57,13 @@ const Contact = () => {
       );
       if (sendEmailResponse.ok) {
         console.log("E-mail enviado com sucesso.");
-        showNotification("Mensagem enviada com sucesso!", "success");
+        showNotification(
+          language === 'pt' ? 
+          "Mensagem enviada com sucesso!" : 
+          "Message sent successfully!", 
+          "success"
+        );
+        // Reset form
         setFormObject({
           name: "",
           email: "",
@@ -62,12 +72,23 @@ const Contact = () => {
         });
       } else {
         console.error("Erro ao enviar e-mail:", await sendEmailResponse.text());
-        showNotification("Erro ao enviar mensagem. Tente novamente.", "error");
+        showNotification(
+          language === 'pt' ? 
+          "Erro ao enviar mensagem. Tente novamente." : 
+          "Failed to send message. Please try again.", 
+          "error"
+        );
       }
     } catch (error) {
       console.error("Erro ao enviar requisição:", error);
-      showNotification("Erro de conexão. Verifique sua internet.", "error");
+      showNotification(
+        language === 'pt' ? 
+        "Erro de conexão. Verifique sua internet." : 
+        "Connection error. Please check your internet.", 
+        "error"
+      );
     } finally {
+      // Reset loading state
       setIsLoading(false);
     }
   };
@@ -75,16 +96,16 @@ const Contact = () => {
   return (
     <section className="contactSection" id="contact">
       <h2 className="experienceSection__title">
-        Contact Me <ion-icon name="mail-unread"></ion-icon>
+        {t('contact.title')} <ion-icon name="mail-unread"></ion-icon>
       </h2>
       <form onSubmit={(e) => handleSubmit(e)} className="contactSection__form">
         <label className="contactSection__inputGroup" htmlFor="name">
-          Nome
+          {t('contact.nameLabel')}
           <div>
             <ion-icon name="person-outline"></ion-icon>
             <input
               type="text"
-              placeholder="Digite seu nome"
+              placeholder={t('contact.namePlaceholder')}
               id="name"
               name="name"
               value={formObject.name}
@@ -92,18 +113,19 @@ const Contact = () => {
                 setFormObject({ ...formObject, name: e.target.value })
               }
               required
+              // Disable input when loading
               disabled={isLoading}
             />
           </div>
         </label>
 
         <label className="contactSection__inputGroup" htmlFor="email">
-          Email
+          {t('contact.emailLabel')}
           <div>
             <ion-icon name="mail-outline"></ion-icon>
             <input
               type="email"
-              placeholder="Digite seu email"
+              placeholder={t('contact.emailPlaceholder')}
               id="email"
               name="email"
               value={formObject.email}
@@ -111,19 +133,19 @@ const Contact = () => {
                 setFormObject({ ...formObject, email: e.target.value })
               }
               required
-
+              // Disable input when loading
               disabled={isLoading}
             />
           </div>
         </label>
 
         <label className="contactSection__inputGroup" htmlFor="subject">
-          Assunto
+          {t('contact.subjectLabel')}
           <div>
             <ion-icon name="chatbox-ellipses-outline"></ion-icon>
             <input
               type="text"
-              placeholder="Digite o assunto"
+              placeholder={t('contact.subjectPlaceholder')}
               id="subject"
               name="subject"
               value={formObject.subject}
@@ -131,44 +153,45 @@ const Contact = () => {
                 setFormObject({ ...formObject, subject: e.target.value })
               }
               required
-
+              // Disable input when loading
               disabled={isLoading}
             />
           </div>
         </label>
 
         <label className="contactSection__inputGroup" htmlFor="mailText">
-          Assunto
+          {t('contact.messageLabel')}
           <div>
             <textarea
               name="mailText"
               id="mailText"
               cols="30"
               rows="5"
-              placeholder="Digite sua menssagem"
+              placeholder={t('contact.messagePlaceholder')}
               value={formObject.mailText}
               onChange={(e) =>
                 setFormObject({ ...formObject, mailText: e.target.value })
               }
               required
-
+              // Disable textarea when loading
               disabled={isLoading}
             ></textarea>
           </div>
         </label>
-        <button
-          className="contactSection__submitBtn"
+        <button 
+          className="contactSection__submitBtn" 
           type="submit"
-
+          // Disable button when loading
           disabled={isLoading}
         >
+          {/* Show loader or text based on loading state */}
           {isLoading ? (
             <>
               <span className="loader"></span>
-              Enviando...
+              {t('contact.sendingButton')}
             </>
           ) : (
-            "Enviar"
+            t('contact.sendButton')
           )}
         </button>
       </form>
@@ -213,7 +236,7 @@ const Contact = () => {
           <p className="contactSection__linkText">Instagram</p>
         </a>
       </div>
-      <Notification
+      <Notification 
         message={notification.message}
         isVisible={notification.isVisible}
         type={notification.type}

@@ -4,8 +4,10 @@ import Header from "../../components/Header/Header";
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import MusicButton from "../../components/MusicButton/MusicButton";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const MyHistory = () => {
+  const { t } = useLanguage();
   const [certifiesShow, setCertifiesShow] = React.useState(4);
   const scrollToTop = () => {
     window.scrollTo(0, 0);
@@ -17,33 +19,29 @@ const MyHistory = () => {
   const historys = [
     {
       year: "2025",
-      title: "Ford Enter",
-      description:
-        "Lorem ipsum dolor sit amet. Et placeat doloremque quo quaerat labore ut alias dolorem aut galisum quia a explicabo laborum aut nulla officiis sit ullam error. At laboriosam tempora At veniam perferendis ut repellat tempora! Aut culpa explicabo id Quis rerum ad sequi quis ut veniam vero ut odio odio non rerum tempore.",
+      title: t('myHistory.fordEnter.title'),
+      description: t('myHistory.fordEnter.description'),
       src: "./historyPhotos/photo1.jpeg",
       imgAlt: "Turma Ford Enter 3º Edital",
     },
     {
       year: "2025",
-      title: "Nasa Space Apps Challenge",
-      description:
-        "Lorem ipsum dolor sit amet. Et placeat doloremque quo quaerat labore ut alias dolorem aut galisum quia a explicabo laborum aut nulla officiis sit ullam error. At laboriosam tempora At veniam perferendis ut repellat tempora! Aut culpa explicabo id Quis rerum ad sequi quis ut veniam vero ut odio odio non rerum tempore.",
+      title: t('myHistory.nasaChallenge.title'),
+      description: t('myHistory.nasaChallenge.description'),
       src: "./historyPhotos/photo3.jpg",
       imgAlt: "Nasa Space Apps Challenge - Time Ford Enter",
     },
     {
       year: "2025",
-      title: "Circular Tech Skills 2025",
-      description:
-        "Lorem ipsum dolor sit amet. Et placeat doloremque quo quaerat labore ut alias dolorem aut galisum quia a explicabo laborum aut nulla officiis sit ullam error. At laboriosam tempora At veniam perferendis ut repellat tempora! Aut culpa explicabo id Quis rerum ad sequi quis ut veniam vero ut odio odio non rerum tempore.",
+      title: t('myHistory.circularTech.title'),
+      description: t('myHistory.circularTech.description'),
       src: "./historyPhotos/photo4.jpg",
       imgAlt: "Circular Tech Skills 2025 - Atuação direta na organização e credenciamento.",
     },
     {
       year: "2024",
-      title: "Cubos Academy",
-      description:
-        "Lorem ipsum dolor sit amet. Et placeat doloremque quo quaerat labore ut alias dolorem aut galisum quia a explicabo laborum aut nulla officiis sit ullam error. At laboriosam tempora At veniam perferendis ut repellat tempora! Aut culpa explicabo id Quis rerum ad sequi quis ut veniam vero ut odio odio non rerum tempore.",
+      title: t('myHistory.cubosAcademy.title'),
+      description: t('myHistory.cubosAcademy.description'),
       src: "./historyPhotos/photo2.jpeg",
       imgAlt: "Mercado Livre + Cubos Academy - Vivence Beta Hub",
     },
@@ -64,10 +62,10 @@ const MyHistory = () => {
       <section className="historySection">
         <div className="historySection__div--1">
           <div className="historySection__div--2">
-            <h1 className="history home__title">This is</h1>
-            <h1 className="history home__title--2">My History</h1>
+            <h1 className="history home__title">{t('myHistory.title')}</h1>
+            <h1 className="history home__title--2">{t('myHistory.subtitle')}</h1>
             <p className="historySection__myResume">
-              I’m João Vitor Santana, a full-stack developer passionate about creating solutions that combine technology, creativity, and real impact. My journey in programming started early, at the age of 14, exploring game development. Over time, I discovered in web development the opportunity to bring ideas to life and turn digital experiences into something remarkable. Throughout this journey, I worked as a robotics instructor, joined challenging projects in front-end and back-end, and have been diving deep into modern frameworks like Next.js and Angular. Today, I’m also part of the Ford &#60;Enter&#62; program at SENAI, where I continue to expand my knowledge in development and innovation. My goal is clear: to build intense and engaging interfaces that blend aesthetics, usability, and purpose. I believe technology should be functional, but also beautiful — something that both delights and solves real problems.
+              {t('myHistory.description')}
             </p>
           </div>
           <div className="historySection__div--3">
@@ -107,7 +105,7 @@ const MyHistory = () => {
           ))}
         </div>
         <h2 className="experienceSection__title">
-          My Certifies<ion-icon name="school"></ion-icon>
+          {t('myHistory.certificatesTitle')}<ion-icon name="school"></ion-icon>
         </h2>
         <div className="historySection__certifiesDiv">
           {certifies.map(
@@ -132,7 +130,7 @@ const MyHistory = () => {
               className="certifiesDiv__viewMoreBtn"
               onClick={() => setCertifiesShow(certifiesShow + 4)}
             >
-              See More
+              {t('myHistory.seeMore')}
             </button>
           )}
         </div>
