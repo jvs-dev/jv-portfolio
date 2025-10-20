@@ -40,8 +40,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Set loading state
+  
     setIsLoading(true);
 
     try {
@@ -87,8 +86,7 @@ const Contact = () => {
           "Connection error. Please check your internet.",
         "error"
       );
-    } finally {
-      // Reset loading state
+    } finally {      
       setIsLoading(false);
     }
   };

@@ -10,6 +10,7 @@ import Skills from "../Skills/Skills";
 import Contact from "../Contact/Contact";
 import Footer from "../../components/Footer/Footer";
 import { useLanguage } from "../../contexts/LanguageContext";
+import { trackButtonClick } from "../../utils/buttonTracker";
 
 const Home = () => {
   const { t, language } = useLanguage();
@@ -115,11 +116,13 @@ const Home = () => {
           </h2>
         )}
         <div className="home__div--1">
-          <a className="home__button" href="https://linkedin.com/in/joão-vitor-dev" target="_blank">
+          <a className="home__button" href="https://linkedin.com/in/joão-vitor-dev" target="_blank"
+            onClick={() => trackButtonClick("LinkedIn Button")}>
             <ion-icon name="logo-linkedin"></ion-icon>
             Linkedin
           </a>
-          <a className="home__button button--2" href={"https://linktr.ee/jvs_dev"} target="_blank">
+          <a className="home__button button--2" href={"https://linktr.ee/jvs_dev"} target="_blank"
+            onClick={() => trackButtonClick("Linktree Button")}>
             {t('home.heroCta')}
           </a>
         </div>        

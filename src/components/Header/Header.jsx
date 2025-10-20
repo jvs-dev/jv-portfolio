@@ -3,6 +3,7 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 import LanguageToggle from "../LanguageToggle/LanguageToggle";
 import { useLanguage } from "../../contexts/LanguageContext";
+import { trackButtonClick } from "../../utils/buttonTracker";
 
 const Header = () => {
   const { t } = useLanguage();
@@ -27,6 +28,20 @@ const Header = () => {
     }
   }, [openMenu]);
 
+  // Add tracking to header buttons
+  useEffect(() => {
+    // Track resume button clicks
+    const resumeBtn = document.querySelector(".header__resumeBtn");
+    if (resumeBtn) {
+      const cleanup = trackButtonClick.bind(null, "Resume Button");
+      resumeBtn.addEventListener("click", cleanup);
+      
+      return () => {
+        resumeBtn.removeEventListener("click", cleanup);
+      };
+    }
+  }, []);
+
   return (
     <header className="header">
       <div className={`header__container ${openMenu ? "active" : ""}`}>
@@ -39,28 +54,40 @@ const Header = () => {
           <Link
             className="header__navLink active"
             to={"/"}
-            onClick={() => setOpenMenu(false)}
+            onClick={() => {
+              setOpenMenu(false);
+              trackButtonClick("Home Link");
+            }}
           >
             {t('header.home')}
           </Link>
           <a
             className="header__navLink"
             href="/#about"
-            onClick={() => setOpenMenu(false)}
+            onClick={() => {
+              setOpenMenu(false);
+              trackButtonClick("About Link");
+            }}
           >
             {t('header.about')}
           </a>
           <a
             className="header__navLink"
             href="/#skills"
-            onClick={() => setOpenMenu(false)}
+            onClick={() => {
+              setOpenMenu(false);
+              trackButtonClick("Skills Link");
+            }}
           >
             {t('header.skills')}
           </a>
           <a
             className="header__navLink"
             href="/#projects"
-            onClick={() => setOpenMenu(false)}
+            onClick={() => {
+              setOpenMenu(false);
+              trackButtonClick("Projects Link");
+            }}
           >
             {t('header.projects')}
           </a>
@@ -68,7 +95,10 @@ const Header = () => {
           <a
             className="header__navLink"
             href="/#contact"
-            onClick={() => setOpenMenu(false)}
+            onClick={() => {
+              setOpenMenu(false);
+              trackButtonClick("Contact Link");
+            }}
           >
             {t('header.contact')}
           </a>
@@ -77,12 +107,16 @@ const Header = () => {
         <LanguageToggle />
       </div>
       <Link to={"/"} className="header__logoLink">
-        <img className="header__logo" src="jvs-logo.svg" alt="JOÃO SILVA" />
+        <img className="header__logo" src="jvs-logo.svg" alt="JOÃO SILVA" 
+          onClick={() => trackButtonClick("Logo Link")} />
       </Link>
       <button
         type="button"
         className={`menutoggle-btn ${openMenu ? "active" : ""}`}
-        onClick={() => setOpenMenu(!openMenu)}
+        onClick={() => {
+          setOpenMenu(!openMenu);
+          trackButtonClick("Menu Toggle");
+        }}
       ></button>
     </header>
   );

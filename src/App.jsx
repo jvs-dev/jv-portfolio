@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import MyHistory from "./pages/MyHistory/MyHistory";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/MyHistory" element={<MyHistory />} />        
+          <Route path="/MyHistory" element={<MyHistory />} />    
+          <Route path="/data" element={<ProtectedRoute />} />    
         </Routes>
       </BrowserRouter>
     </LanguageProvider>

@@ -1,5 +1,7 @@
 import React from "react";
 import "./MusicButton.css";
+import { trackButtonClick } from "../../utils/buttonTracker";
+
 const fadeDuration = 8000;
 
 const MusicButton = () => {
@@ -30,6 +32,9 @@ const MusicButton = () => {
       audio.pause();
       setMusicPlaying(false);
     }
+    
+    // Track button click
+    trackButtonClick("Music Toggle Button");
   };
 
   return (
