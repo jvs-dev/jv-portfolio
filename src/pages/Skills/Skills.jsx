@@ -78,7 +78,7 @@ const Skills = () => {
     ["Figma", "UI & UX Design"],
     ["Rest APIs", "Jest para testes"],
     ["Tensorflow", "Gemini AI - APIs"],
-    ["DevOps", "Github"],
+    ["DevOps", "CI/CD"],
     ["Scrum", "Kabam"],
     ["Firebase", "AWS"],
   ];
