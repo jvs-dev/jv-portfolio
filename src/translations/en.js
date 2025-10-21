@@ -5,7 +5,7 @@ const en = {
     about: "About",
     skills: "Tech Stacks",
     projects: "Projects",
-    contact: "FAQ",
+    contact: "Contact",
     resume: "Resume"
   },
 

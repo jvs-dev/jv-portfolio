@@ -5,7 +5,7 @@ const pt = {
     about: "Sobre",
     skills: "Tecnologias",
     projects: "Projetos",
-    contact: "FAQ",
+    contact: "Contato",
     resume: "Currículo"
   },
   

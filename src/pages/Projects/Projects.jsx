@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Projects.css";
 import { Link } from "react-router-dom";
+import { faBootstrap, faJava, faNpm, faYarn } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLanguage } from "../../contexts/LanguageContext";
 import ProjectModal from "../../components/ProjectModal/ProjectModal";
 
@@ -10,7 +12,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Responsive landing page for cat food",
-      description: "A website for a cat food company.",
+      description: `"Catspi" is an academic landing page project for a fictional premium cat food brand. Developed in partnership with designer Cauã Silveira, this project was completed for Unijorje University.`,
       webLink: "https://catspy-omega.vercel.app",
       image: "./projects/project-1-banner.svg",
       logo: "./projects/project-1-logo.svg",
@@ -19,12 +21,14 @@ const Projects = () => {
       languageTags: [
         { name: "HTML", icon: <ion-icon className="projectTag__icon" name="logo-html5"></ion-icon>, color: "#E34C26" },
         { name: "CSS", icon: <ion-icon className="projectTag__icon" name="logo-css3"></ion-icon>, color: "#1572B6" },
-        { name: "JavaScript", icon: <ion-icon className="projectTag__icon" name="logo-javascript"></ion-icon>, color: "#F7DF1E" }
+        { name: "JavaScript", icon: <ion-icon className="projectTag__icon" name="logo-javascript"></ion-icon>, color: "#F7DF1E" },
+        { name: "React.js", icon: <ion-icon className="projectTag__icon" name="logo-react"></ion-icon>, color: "#61DAFB" },
+        { name: "Bootstrap", icon: <FontAwesomeIcon icon={faBootstrap} className="projectTag__icon" />, color: "#7952B3" },
       ],
     },
     {
       title: "Barber shop app with online scheduling",
-      description: "A website for a barber shop.",
+      description: `A website where clients can schedule services online, integrated with a barber management app. Through the app, professionals can update all website data and text and manage their schedule in real time.`,
       webLink: "https://lio-hairstyle.vercel.app",
       image: "./projects/project-2-banner.svg",
       model: "./projects/project-2-model.svg",
@@ -38,7 +42,7 @@ const Projects = () => {
     },
     {
       title: "Complete system for robotics classes",
-      description: "A platform for teaching programming through robots.",
+      description: `"Makeroom" is a comprehensive website designed to manage robotics courses for students at partner schools. The platform was created as an interactive, gamified learning ecosystem.`,
       webLink: "https://makeroom.vercel.app",
       image: "./projects/project-3-banner.svg",
       logo: "./projects/project-3-logo.svg",
@@ -48,12 +52,13 @@ const Projects = () => {
         { name: "HTML", icon: <ion-icon className="projectTag__icon" name="logo-html5"></ion-icon>, color: "#E34C26" },
         { name: "CSS", icon: <ion-icon className="projectTag__icon" name="logo-css3"></ion-icon>, color: "#1572B6" },
         { name: "JavaScript", icon: <ion-icon className="projectTag__icon" name="logo-javascript"></ion-icon>, color: "#F7DF1E" },
-        { name: "React", icon: <ion-icon className="techCard__icon" name="logo-react"></ion-icon>, color: "#61DAFB" }
+        { name: "React.js", icon: <ion-icon className="projectTag__icon" name="logo-react"></ion-icon>, color: "#61DAFB" },
+        { name: "Firebase", icon: <ion-icon className="projectTag__icon" name="logo-firebase"></ion-icon>, color: "#FBC02D" },
       ],
     },
     {
       title: "Website for advertising the new Ford Ranger.",
-      description: "A website for Ford Enter.",
+      description: `This website was an academic project developed during the FORD ENTER course to announce the launch of the new Ford Ranger. The development strictly followed a detailed design and brand guidelines provided by Ford Motors Company.`,
       webLink: "https://jvs-dev-desafio-ford.vercel.app",
       image: "./projects/project-4-banner.svg",
       model: "./projects/project-4-model.svg",
