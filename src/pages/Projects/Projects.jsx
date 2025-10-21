@@ -52,7 +52,8 @@ const Projects = () => {
         { name: "HTML", icon: <ion-icon className="projectTag__icon" name="logo-html5"></ion-icon>, color: "#E34C26" },
         { name: "CSS", icon: <ion-icon className="projectTag__icon" name="logo-css3"></ion-icon>, color: "#1572B6" },
         { name: "JavaScript", icon: <ion-icon className="projectTag__icon" name="logo-javascript"></ion-icon>, color: "#F7DF1E" },
-        { name: "React.js", icon: <ion-icon className="projectTag__icon" name="logo-react"></ion-icon>, color: "#61DAFB" },
+        { name: "Node.js", icon: <ion-icon className="projectTag__icon" name="logo-nodejs"></ion-icon>, color: "#339933" },
+        { name: "Next.js", icon: <img src="./icons/nextjs.svg" alt="Next.js" />, color: "#339933" },
         { name: "Firebase", icon: <ion-icon className="projectTag__icon" name="logo-firebase"></ion-icon>, color: "#FBC02D" },
       ],
     },
@@ -73,7 +74,7 @@ const Projects = () => {
   ]
   const [projectViwed, setProjectViwed] = React.useState(1);
   const [animation, setAnimation] = useState(false);
-  const [listView, setListView] = useState(false);
+  const [listView, setListView] = useState(true);
   const [selectedProject, setSelectedProject] = useState(null);
 
   function handleClick(goTo) {

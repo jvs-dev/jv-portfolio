@@ -36,6 +36,11 @@ const Skills = () => {
       color: "#61DAFB",
     },
     {
+      icon: <img src="./icons/nextjs.svg" alt="Next.js" />,
+      name: "Next.JS",
+      color: "#61DAFB",
+    },
+    {
       icon: (
         <ion-icon className="techCard__icon" name="logo-angular"></ion-icon>
       ),
@@ -73,9 +78,9 @@ const Skills = () => {
     ["Figma", "UI & UX Design"],
     ["Rest APIs", "Jest para testes"],
     ["Tensorflow", "Gemini AI - APIs"],
-    ["Git", "Github"],
+    ["DevOps", "Github"],
     ["Scrum", "Kabam"],
-    ["Firebase", "Appwrite"],
+    ["Firebase", "AWS"],
   ];
 
   const techLists = [];

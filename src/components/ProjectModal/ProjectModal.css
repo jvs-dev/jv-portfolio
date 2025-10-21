@@ -190,6 +190,12 @@
    color: var(--icon-clr);
 }
 
+.project-modal-tag img {
+   width: 36px;
+   height: 36px;
+   color: var(--icon-clr);
+}
+
 .project-modal-links-container {
    display: flex;
    gap: 15px;
@@ -319,6 +325,9 @@
    }
 
    .projectTag__icon {
+      display: none;
+   }
+   .project-modal-tag img {
       display: none;
    }
 }
