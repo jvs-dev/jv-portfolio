@@ -19,13 +19,11 @@ const useTypingEffect = (texts, speed = 100, delay = 1000) => {
           setIsDeleting(false);
           setTextIndex((prev) => (prev + 1) % texts.length);
         }
-      } else {
-        // Typing text
+      } else {        
         setDisplayText(currentText.substring(0, currentIndex + 1));
         setCurrentIndex(prev => prev + 1);
         
-        if (currentIndex === currentText.length) {
-          // Finished typing, start deleting after delay
+        if (currentIndex === currentText.length) {          
           setTimeout(() => setIsDeleting(true), delay);
         }
       }

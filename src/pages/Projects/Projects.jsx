@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Projects.css";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../../contexts/LanguageContext";
+import ProjectModal from "../../components/ProjectModal/ProjectModal";
 
 const Projects = () => {
   const { t } = useLanguage();
@@ -15,7 +16,11 @@ const Projects = () => {
       logo: "./projects/project-1-logo.svg",
       model: "./projects/project-1-model.svg",
       gitHubLink: "https://github.com/jvs-dev/catspy",
-      languageTags: ["HTML", "CSS", "JavaScript"],
+      languageTags: [
+        { name: "HTML", icon: <ion-icon className="projectTag__icon" name="logo-html5"></ion-icon>, color: "#E34C26" },
+        { name: "CSS", icon: <ion-icon className="projectTag__icon" name="logo-css3"></ion-icon>, color: "#1572B6" },
+        { name: "JavaScript", icon: <ion-icon className="projectTag__icon" name="logo-javascript"></ion-icon>, color: "#F7DF1E" }
+      ],
     },
     {
       title: "Barber shop app with online scheduling",
@@ -25,7 +30,11 @@ const Projects = () => {
       model: "./projects/project-2-model.svg",
       logo: "./projects/project-2-logo.svg",
       gitHubLink: "https://github.com/jvs-dev/lio-hairstyle-web",
-      languageTags: ["HTML", "CSS", "JavaScript"],
+      languageTags: [
+        { name: "HTML", icon: <ion-icon className="projectTag__icon" name="logo-html5"></ion-icon>, color: "#E34C26" },
+        { name: "CSS", icon: <ion-icon className="projectTag__icon" name="logo-css3"></ion-icon>, color: "#1572B6" },
+        { name: "JavaScript", icon: <ion-icon className="projectTag__icon" name="logo-javascript"></ion-icon>, color: "#F7DF1E" }
+      ],
     },
     {
       title: "Complete system for robotics classes",
@@ -35,22 +44,32 @@ const Projects = () => {
       logo: "./projects/project-3-logo.svg",
       model: "./projects/project-3-model.svg",
       gitHubLink: "https://github.com/jvs-dev/Makeroom",
-      languageTags: ["HTML", "CSS", "JavaScript"],
+      languageTags: [
+        { name: "HTML", icon: <ion-icon className="projectTag__icon" name="logo-html5"></ion-icon>, color: "#E34C26" },
+        { name: "CSS", icon: <ion-icon className="projectTag__icon" name="logo-css3"></ion-icon>, color: "#1572B6" },
+        { name: "JavaScript", icon: <ion-icon className="projectTag__icon" name="logo-javascript"></ion-icon>, color: "#F7DF1E" },
+        { name: "React", icon: <ion-icon className="techCard__icon" name="logo-react"></ion-icon>, color: "#61DAFB" }
+      ],
     },
     {
       title: "Website for advertising the new Ford Ranger.",
       description: "A website for Ford Enter.",
       webLink: "https://jvs-dev-desafio-ford.vercel.app",
-      image: "./projects/project-2-banner.svg",
-      model: "./projects/project-2-model.svg",
-      logo: "./projects/project-2-logo.svg",
+      image: "./projects/project-4-banner.svg",
+      model: "./projects/project-4-model.svg",
+      logo: "./projects/project-4-logo.svg",
       gitHubLink: "https://github.com/jvs-dev/DESAFIO-HTML-E-CSS",
-      languageTags: ["HTML", "CSS", "JavaScript"]
+      languageTags: [
+        { name: "HTML", icon: <ion-icon className="projectTag__icon" name="logo-html5"></ion-icon>, color: "#E34C26" },
+        { name: "CSS", icon: <ion-icon className="projectTag__icon" name="logo-css3"></ion-icon>, color: "#1572B6" },
+        { name: "JavaScript", icon: <ion-icon className="projectTag__icon" name="logo-javascript"></ion-icon>, color: "#F7DF1E" }
+      ],
     },
   ]
   const [projectViwed, setProjectViwed] = React.useState(1);
   const [animation, setAnimation] = useState(false);
   const [listView, setListView] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   function handleClick(goTo) {
     setAnimation(true);
@@ -67,6 +86,14 @@ const Projects = () => {
       setAnimation(false);
     }, 1000);
   }
+
+  const openProjectModal = (project) => {
+    setSelectedProject(project);
+  };
+
+  const closeProjectModal = () => {
+    setSelectedProject(null);
+  };
 
   return (
     <section className="projectsSection" id="projects">
@@ -99,6 +126,7 @@ const Projects = () => {
               className={`projectWindow__viewButton ${animation && "sideAnime"
                 }`}
               type="button"
+              onClick={() => openProjectModal(projects[projectViwed - 1])}
             >
               View
             </button>
@@ -177,6 +205,11 @@ const Projects = () => {
           </article>
         ))}
       </div>
+
+      <ProjectModal
+        project={selectedProject}
+        onClose={closeProjectModal}
+      />
     </section>
   );
 };

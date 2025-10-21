@@ -1,0 +1,275 @@
+.project-modal-overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: rgba(0, 0, 0, 0.95);
+   backdrop-filter: blur(5px);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 1000;
+   padding: 20px;
+   animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+   }
+
+   to {
+      opacity: 1;
+   }
+}
+
+.project-modal-content {
+   position: relative;
+   width: 90%;
+   max-width: 1200px;
+   max-height: calc(100vh - 40px);
+   background: var(--card-background-2);
+   border-radius: 20px;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+   animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+   from {
+      transform: translateY(-50px);
+      opacity: 0;
+   }
+
+   to {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+.project-modal-close {
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   background: var(--gradient);
+   color: white;
+   border: none;
+   width: 40px;
+   height: 40px;
+   border-radius: 100%;
+   cursor: pointer;
+   font-size: 25px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 1001;
+   transition: 0.3s ease;
+}
+
+.project-modal-close:hover {
+   transform: rotate(90deg);
+}
+
+.project-modal-logo-container {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: flex-start;
+   padding: 10px 0px 0px 0px;
+   gap: 10px;
+}
+
+.project-modal-logo {
+   max-width: 140px;
+   max-height: 140px;
+   object-fit: contain;
+}
+
+.project-modal-title {
+   font-family: var(--title-font);
+   color: var(--title-white);
+   margin: 0;
+   font-size: 2.2rem;
+   font-weight: 500;
+   width: 100%;
+   padding: 0px 40px 0px 0px;
+}
+
+.project-modal-body {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   padding: 20px 40px 30px 30px;
+   overflow: auto;
+}
+
+.project-modal-image-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+}
+
+.project-modal-image {
+   max-width: 100%;
+   max-height: 40vh;
+   width: 50%;
+   height: auto;
+   object-fit: contain;
+}
+
+.project-modal-info {
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+   padding: 10px 0px 0px 0px;
+   margin: 20px 0px 0px 0px;
+   border-top: solid 4px var(--primary-red);   
+}
+
+.project-modal-description {
+   font-family: var(--text-font);
+   color: var(--white);
+   font-size: 18px;
+   line-height: 1.6;
+   margin: 0;
+   padding: 0;
+   word-wrap: break-word;
+}
+
+.project-modal-description h3,
+.project-modal-tags h3,
+.project-modal-links h3 {
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   color: var(--white);
+   font-size: 1.3rem;
+   margin: 0 0 15px 0;
+   padding-bottom: 8px;
+}
+
+.project-modal-description p {
+   color: var(--title-white);
+   font-size: 1.1rem;
+   line-height: 1.6;
+   margin: 0;
+}
+
+.project-modal-tags-container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 12px;
+}
+
+.project-modal-tag {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 8px;
+   padding: 0px 10px;
+}
+
+.project-modal-tag p {
+   font-family: "Poppins", sans-serif;
+   font-size: 14px;
+   margin: 0px;
+   font-weight: 600;
+   color: var(--white);
+   text-transform: uppercase;
+}
+
+.projectTag__icon {
+   font-size: 36px;
+   color: var(--icon-clr);
+}
+
+.project-modal-links-container {
+   display: flex;
+   gap: 15px;
+   flex-wrap: wrap;
+}
+
+.project-modal-link-button {
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   background: var(--gradient);
+   color: var(--white);
+   padding: 12px 34px;
+   border-radius: 30px;
+   text-decoration: none;
+   font-weight: 600;
+   transition: 0.3s ease;
+}
+
+.project-modal-link-button:hover {
+   transform: translateY(-3px);
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-modal-link-button.github {
+   background: #000;
+   color: white;
+}
+
+@media (max-width: 768px) {
+   .project-modal-content {
+      width: 95%;
+      max-height: 95vh;
+   }
+
+   .project-modal-header {
+      padding: 20px;
+   }
+
+   .project-modal-title {
+      font-size: 1.5rem;
+   }
+
+   .project-modal-body {
+      padding: 15px;
+   }
+
+   .project-modal-description h3,
+   .project-modal-tags h3,
+   .project-modal-links h3 {
+      font-size: 1.3rem;
+   }
+
+   .project-modal-link-button {
+      padding: 10px 16px;
+      font-size: 0.9rem;
+   }
+}
+
+@media (max-width: 480px) {
+   .project-modal-content {
+      width: 98%;
+      border-radius: 15px;
+   }
+
+   .project-modal-header {
+      padding: 15px;
+   }
+
+   .project-modal-title {
+      font-size: 1.3rem;
+   }
+
+   .project-modal-body {
+      padding: 12px;
+      gap: 20px;
+   }
+
+   .project-modal-links-container {
+      flex-direction: column;
+   }
+
+   .project-modal-link-button {
+      justify-content: center;
+   }
+}
