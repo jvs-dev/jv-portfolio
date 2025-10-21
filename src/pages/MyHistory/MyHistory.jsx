@@ -249,7 +249,7 @@ const MyHistory = () => {
                       alt={obj.title}
                       onClick={() => openCertificateModal(obj)}
                     />
-                    <button 
+                    <button
                       className="certifyCard__expandBtn"
                       onClick={() => openCertificateModal(obj)}
                       title="Expandir certificado"
@@ -262,24 +262,24 @@ const MyHistory = () => {
                 </div>
               )
           )}
-          {certifiesShow < certifies.length && (
-            <button
-              type="button"
-              className="certifiesDiv__viewMoreBtn"
-              onClick={() => setCertifiesShow(certifiesShow + 4)}
-            >
-              {t('myHistory.seeMore')}
-            </button>
-          )}
         </div>
+        {certifiesShow < certifies.length && (
+          <button
+            type="button"
+            className="certifiesDiv__viewMoreBtn"
+            onClick={() => setCertifiesShow(certifiesShow + 4)}
+          >
+            {t('myHistory.seeMore')}
+          </button>
+        )}
       </section>
       <MusicButton />
       <Footer />
-      
+
       {/* Certificate Modal */}
-      <CertificateModal 
-        certificate={selectedCertificate} 
-        onClose={closeCertificateModal} 
+      <CertificateModal
+        certificate={selectedCertificate}
+        onClose={closeCertificateModal}
       />
     </main>
   );

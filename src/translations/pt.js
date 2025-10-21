@@ -51,7 +51,7 @@ const pt = {
   myHistory: {
     title: "Esta é",
     subtitle: "Minha História",
-    description: "Minha jornada na programação começou aos 14 anos, e desde então tenho sido impulsionado pela transformação de ideias em experiências digitais notáveis. Como desenvolvedor full-stack, trabalhei em projetos desafiadores e também desenvolvo códigos para sistemas embarcados como Arduino em C++. Atualmente estudo desenvolvimento de IA, um campo que me fascina profundamente. Meu foco é criar interfaces ricas e envolventes que sejam não apenas funcionais, mas também bonitas. Acredito que a tecnologia deve encantar e resolver problemas reais.",
+    description: "Minha jornada na programação começou aos 14 anos, e desde então tenho sido impulsionado pela transformação de ideias em experiências digitais notáveis. Como desenvolvedor full-stack, trabalhei em projetos desafiadores e também desenvolvo códigos para sistemas embarcados como Arduino em C++. Atualmente estudo desenvolvimento de IA, um campo que me fascina profundamente. Meu foco é criar interfaces ricas e envolventes que sejam não apenas funcionais, mas também encantadoras. Acredito que a tecnologia deve encantar e resolver problemas reais.",
     fordEnter: {
       title: "Ford Enter",
       description: "Completei o programa de treinamento Ford <Enter>, um curso intensivo oferecido pela Ford em parceria com o SENAI CIMATEC e a Rede Cidadã, destinado a formar profissionais na área de tecnologia. O currículo abrangeu desde o desenvolvimento front-end com o framework Angular até a aplicação de práticas de inovação em projetos desafiadores. Este treinamento consolidou minhas habilidades técnicas e me proporcionou uma experiência valiosa e única."
