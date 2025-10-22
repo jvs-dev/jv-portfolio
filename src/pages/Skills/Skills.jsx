@@ -58,6 +58,16 @@ const Skills = () => {
       color: "#f8981d",
     },
     {
+      icon: <img src="./icons/mysql.svg" alt="mysql" />,
+      name: "MYSQL",
+      color: "#4479a1",
+    },
+    {
+      icon: <img src="./icons/springboot.svg" alt="springboot" />,
+      name: "SPRINGBOOT",
+      color: "#6db33f",
+    },
+    {
       icon: <FontAwesomeIcon icon={faNpm} />,
       name: "NPM",
       color: "#cb2026",
