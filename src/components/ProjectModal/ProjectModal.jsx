@@ -1,7 +1,10 @@
 import React from 'react';
+import { useLanguage } from '../../contexts/LanguageContext';
 import './ProjectModal.css';
 
 const ProjectModal = ({ project, onClose }) => {
+   const { t } = useLanguage();
+   
    if (!project) return null;
 
    return (
@@ -27,7 +30,7 @@ const ProjectModal = ({ project, onClose }) => {
                   </div>
                   
                   <div className="project-modal-tags">
-                     <h3>Technologies Used</h3>
+                     <h3>{t('projects.technologiesUsed')}</h3>
                      <div className="project-modal-tags-container">
                         {project.languageTags && project.languageTags.map((tag, index) => (
                            <article key={index} className="project-modal-tag" style={{ '--icon-clr': tag.color }}>
@@ -48,7 +51,7 @@ const ProjectModal = ({ project, onClose }) => {
                               className="project-modal-link-button"
                            >
                               <ion-icon name="globe-outline"></ion-icon>
-                              Live Demo
+                              {t('projects.liveDemo')}
                            </a>
                         )}
                         {project.gitHubLink && (

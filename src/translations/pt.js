@@ -27,6 +27,32 @@ const pt = {
     projectsTitle: "Projetos em Destaque",
     contactTitle: "Entre em Contato"
   },
+
+  // Projects page translations
+  projects: {
+    title: "Meus Projetos",
+    viewButton: "Ver",
+    cardsView: "Cartões",
+    listView: "Lista",
+    technologiesUsed: "Tecnologias Utilizadas",
+    liveDemo: "Live Demo",
+    project1: {
+      title: "Landing page responsiva para ração de gatos",
+      description: `"Catspi" é um projeto acadêmico de landing page para uma marca fictícia de ração premium para gatos. Desenvolvido em parceria com o designer Cauã Silveira, este projeto foi concluído para a Universidade Unijorje.`
+    },
+    project2: {
+      title: "App para barbearia com agendamento online",
+      description: `Um site onde os clientes podem agendar serviços online, integrado com um aplicativo de gerenciamento da barbearia. Através do app, os profissionais podem atualizar todos os dados e textos do site e gerenciar sua agenda em tempo real.`
+    },
+    project3: {
+      title: "Sistema completo para aulas de robótica",
+      description: `"Makeroom" é um site abrangente projetado para gerenciar cursos de robótica para estudantes de escolas parceiras. A plataforma foi criada como um ecossistema de aprendizagem interativo e gamificado.`
+    },
+    project4: {
+      title: "Website para divulgação da nova Ford Ranger.",
+      description: `Este website foi um projeto acadêmico desenvolvido durante o curso FORD ENTER para anunciar o lançamento da nova Ford Ranger. O desenvolvimento seguiu estritamente um design detalhado e diretrizes da marca fornecidas pela Ford Motors Company.`
+    }
+  },
   
   // Contact page translations
   contact: {

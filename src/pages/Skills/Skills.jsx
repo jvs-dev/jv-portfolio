@@ -48,6 +48,11 @@ const Skills = () => {
       color: "#b31d22",
     },
     {
+      icon: <img src="./icons/vitejs.svg" alt="Vite.js" />,
+      name: "Vite.JS",
+      color: "#646cff",
+    },
+    {
       icon: <FontAwesomeIcon icon={faJava} />,
       name: "JAVA",
       color: "#f8981d",

@@ -28,6 +28,32 @@ const en = {
     contactTitle: "Get In Touch"
   },
 
+  // Projects page translations
+  projects: {
+    title: "My Projects",
+    viewButton: "View",
+    cardsView: "Cards",
+    listView: "List",
+    technologiesUsed: "Technologies Used",
+    liveDemo: "Live Demo",
+    project1: {
+      title: "Responsive landing page for cat food",
+      description: `"Catspi" is an academic landing page project for a fictional premium cat food brand. Developed in partnership with designer Cauã Silveira, this project was completed for Unijorje University.`
+    },
+    project2: {
+      title: "Barber shop app with online scheduling",
+      description: `A website where clients can schedule services online, integrated with a barber management app. Through the app, professionals can update all website data and text and manage their schedule in real time.`
+    },
+    project3: {
+      title: "Complete system for robotics classes",
+      description: `"Makeroom" is a comprehensive website designed to manage robotics courses for students at partner schools. The platform was created as an interactive, gamified learning ecosystem.`
+    },
+    project4: {
+      title: "Website for advertising the new Ford Ranger.",
+      description: `This website was an academic project developed during the FORD ENTER course to announce the launch of the new Ford Ranger. The development strictly followed a detailed design and brand guidelines provided by Ford Motors Company.`
+    }
+  },
+
   // Contact page translations
   contact: {
     title: "Contact Me",
